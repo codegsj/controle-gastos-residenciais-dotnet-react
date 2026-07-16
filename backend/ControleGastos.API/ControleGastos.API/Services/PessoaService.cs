@@ -32,5 +32,17 @@ namespace ControleGastos.API.Services
                 .Include(p => p.Transacoes)
                 .ToListAsync();
         }
+
+        public async Task<bool> ExcluirPessoaAsync(int id) // método que exclui uma pessoa do banco de dados
+        {
+            var pessoa = await _context.Pessoas.FindAsync(id);
+            if (pessoa == null)
+            {
+                return false; // retorna falso caso a pessoa não exista
+            }
+            _context.Pessoas.Remove(pessoa);
+            await _context.SaveChangesAsync();
+            return true; // retorna verdadeiro caso a pessoa tenha sido excluída com sucesso
+        }
     }
 }

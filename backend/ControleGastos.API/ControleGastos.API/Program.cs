@@ -13,7 +13,7 @@ namespace ControleGastos.API
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddScoped<PessoaService>();
+            builder.Services.AddScoped<PessoaService>(); // injeção de dependência para utilizar o serviço PessoaService
             builder.Services.AddControllers();
 
             
