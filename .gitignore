@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# .NET
+bin/
+obj/
+
+# React / Node
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# Configurações locais
+appsettings.Development.json
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
