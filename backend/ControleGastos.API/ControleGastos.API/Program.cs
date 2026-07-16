@@ -14,6 +14,7 @@ namespace ControleGastos.API
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<PessoaService>(); // injeção de dependência para utilizar o serviço PessoaService
+            builder.Services.AddScoped<TransacaoService>(); // injeção de dependência para utilizar o serviço TransacaoService
             builder.Services.AddControllers();
 
             
