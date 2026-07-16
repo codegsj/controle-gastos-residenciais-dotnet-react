@@ -4,7 +4,7 @@
     public class Pessoa
     {
         public int Id { get; set; } //  representa o identificador único da pessoa / pk no banco de dados
-        public string Nome { get; set; }
+        public string Nome { get; set; } = string.Empty;
         public int Idade { get; set; } // menor de idade só pode cadastrar despesas 
         public ICollection<Transacao> Transacoes { get; set; } = new List<Transacao>(); // representa as transações das pessoas 
     }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ControleGastos.API.Models;
+
 namespace ControleGastos.API.Data
 {
     public class ApplicationDbContext : DbContext // representa o contexto do banco de dados da aplicação
@@ -22,3 +23,4 @@ namespace ControleGastos.API.Data
         }
     }
 }
+    
