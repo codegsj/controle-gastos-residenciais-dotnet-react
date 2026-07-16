@@ -1,4 +1,5 @@
 using ControleGastos.API.Data;
+using ControleGastos.API.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace ControleGastos.API
@@ -12,7 +13,9 @@ namespace ControleGastos.API
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            builder.Services.AddScoped<PessoaService>();
             builder.Services.AddControllers();
+
             
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
