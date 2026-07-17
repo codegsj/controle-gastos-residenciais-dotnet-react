@@ -15,9 +15,18 @@ namespace ControleGastos.API
 
             builder.Services.AddScoped<PessoaService>(); // injeção de dependência para utilizar o serviço PessoaService
             builder.Services.AddScoped<TransacaoService>(); // injeção de dependência para utilizar o serviço TransacaoService
-            builder.Services.AddControllers();
 
-            
+            builder.Services.AddControllers() // injeção de dependência para utilizar o serviço de controllers 
+                    .AddJsonOptions(options =>
+                    {
+                        options.JsonSerializerOptions.ReferenceHandler = 
+                         System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                    });
+
+
+
+
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
