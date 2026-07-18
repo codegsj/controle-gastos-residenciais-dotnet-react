@@ -10,7 +10,7 @@ Sistema de controle de gastos residenciais desenvolvido para processo seletivo.
 - Entity Framework Core
 - SQL Server
 - Serilog
-- Postaman
+- Postman
 - Swagger
 
 ### Frontend
