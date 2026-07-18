@@ -9,10 +9,15 @@ namespace ControleGastos.API.Services
     public class RelatorioService // serviço responsável por gerar relatórios de gastos, receitas e saldo líquido das pessoas cadastradas no sistema
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<RelatorioService> _logger;
 
-        public RelatorioService(ApplicationDbContext context)
+
+        public RelatorioService(
+            ApplicationDbContext context,
+            ILogger<RelatorioService> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
 
@@ -21,6 +26,12 @@ namespace ControleGastos.API.Services
             var pessoas = await _context.Pessoas
                 .Include(p => p.Transacoes)
                 .ToListAsync();
+
+
+            _logger.LogInformation(
+                "Geração de relatório geral iniciada. Quantidade de pessoas encontradas: {Quantidade}",
+                pessoas.Count
+            );
 
 
             var resultado = pessoas.Select(p => new ConsultaTotaisDto
@@ -61,6 +72,11 @@ namespace ControleGastos.API.Services
             };
 
 
+            _logger.LogInformation(
+                "Relatório geral gerado com sucesso."
+            );
+
+
             return new RelatorioGastosDto // objeto que representa o relatório de gastos, receitas e saldo líquido de todas as pessoas cadastradas no sistema
             {
                 Pessoas = resultado,
@@ -69,7 +85,7 @@ namespace ControleGastos.API.Services
         }
 
 
-        public async Task<ConsultaTotaisDto?> ObterTotaisPorPessoaAsync(int pessoaId) // método assíncrono que retorna um objeto do tipo ConsultaTotaisDto contendo os totais de receitas, despesas e saldo líquido de uma pessoa específica cadastrada no sistema
+        public async Task<ConsultaTotaisDto> ObterTotaisPorPessoaAsync(int pessoaId) // método assíncrono que retorna um objeto do tipo ConsultaTotaisDto contendo os totais de receitas, despesas e saldo líquido de uma pessoa específica cadastrada no sistema
         {
             var pessoa = await _context.Pessoas
                 .Include(p => p.Transacoes)
@@ -78,6 +94,11 @@ namespace ControleGastos.API.Services
 
             if (pessoa == null) // verifica se a pessoa existe no banco de dados, caso não exista retorna uma exceção de pessoa não encontrada
             {
+                _logger.LogWarning(
+                    "Tentativa de gerar relatório para pessoa inexistente. PessoaId: {PessoaId}",
+                    pessoaId
+                );
+
                 throw new NotFoundException("Pessoa não encontrada.");
             }
 
@@ -90,6 +111,12 @@ namespace ControleGastos.API.Services
             var despesas = pessoa.Transacoes // calcula o total de despesas da pessoa, somando os valores das transferências do tipo Despesa
                 .Where(t => t.Tipo == TipoTransacao.Despesa)
                 .Sum(t => t.Valor);
+
+
+            _logger.LogInformation(
+                "Relatório individual gerado com sucesso. PessoaId: {PessoaId}",
+                pessoaId
+            );
 
 
             return new ConsultaTotaisDto // retorna um objeto do tipo ConsultaTotaisDto contendo os totais de receitas, despesas e saldo líquido da pessoa específica

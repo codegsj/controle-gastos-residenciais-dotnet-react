@@ -10,10 +10,12 @@ namespace ControleGastos.API.Services
     public class TransacaoService // classe responsável por salvar, buscar e excluir transações no banco de dados
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<TransacaoService> _logger;
 
-        public TransacaoService(ApplicationDbContext context)
+        public TransacaoService(ApplicationDbContext context, ILogger<TransacaoService> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
 
@@ -25,13 +27,26 @@ namespace ControleGastos.API.Services
 
             if (pessoa == null)
             {
+                _logger.LogWarning(
+                    "Tentativa de criar transação para pessoa inexistente. PessoaId: {PessoaId}",
+                    dto.PessoaId
+                );
+
                 throw new NotFoundException("Pessoa não encontrada.");
             }
 
 
-            if (pessoa.Idade < 18 && dto.Tipo == TipoTransacao.Receita) // Verifica se a pessoa é menor de idade e está tentando cadastrar uma receita
+            if (pessoa.Idade < 18 && dto.Tipo == TipoTransacao.Receita)
             {
-                throw new BusinessException("Pessoas menores de idade podem cadastrar apenas despesas.");
+                _logger.LogWarning(
+                    "Tentativa bloqueada. Pessoa menor de idade tentou cadastrar receita. PessoaId: {PessoaId}",
+                    pessoa.Id
+                );
+
+                throw new BusinessException(
+                     "Pessoas menores de idade podem cadastrar apenas despesas."
+                );
+
             }
 
 
@@ -49,6 +64,16 @@ namespace ControleGastos.API.Services
 
             await _context.SaveChangesAsync();
 
+
+            _logger.LogInformation(
+                "Transação criada com sucesso. Id: {Id}, PessoaId: {PessoaId}, Tipo: {Tipo}, Valor: {Valor}",
+                transacao.Id,
+                transacao.PessoaId,
+                transacao.Tipo,
+                transacao.Valor
+            );
+
+
             return transacao;
         }
 
@@ -58,6 +83,12 @@ namespace ControleGastos.API.Services
             var transacoes = await _context.Transacoes
                 .Include(t => t.Pessoa)
                 .ToListAsync();
+
+
+            _logger.LogInformation(
+                "Consulta de transações realizada com sucesso. Quantidade encontrada: {Quantidade}",
+                transacoes.Count
+            );
 
 
             return transacoes.Select(t => new TransacaoResponseDto // Mapeia cada transação para um DTO de resposta, incluindo o nome da pessoa associada
@@ -82,6 +113,11 @@ namespace ControleGastos.API.Services
 
             if (!pessoaExiste)
             {
+                _logger.LogWarning(
+                    "Tentativa de buscar transações de pessoa inexistente. PessoaId: {PessoaId}",
+                    pessoaId
+                );
+
                 throw new NotFoundException("Pessoa não encontrada."); // Lança uma exceção se a pessoa não for encontrada no banco de dados
             }
 
@@ -90,6 +126,23 @@ namespace ControleGastos.API.Services
                 .Include(t => t.Pessoa)
                 .Where(t => t.PessoaId == pessoaId)
                 .ToListAsync();
+
+
+            if (!transacoes.Any())
+            {
+                _logger.LogWarning(
+                    "Pessoa encontrada, porém não possui transações cadastradas. PessoaId: {PessoaId}",
+                    pessoaId
+                );
+            }
+            else
+            {
+                _logger.LogInformation(
+                    "Consulta de transações por pessoa realizada com sucesso. PessoaId: {PessoaId}, Quantidade encontrada: {Quantidade}",
+                    pessoaId,
+                    transacoes.Count
+                );
+            }
 
 
             return transacoes.Select(t => new TransacaoResponseDto // Mapeia cada transação para um DTO de resposta, incluindo o nome da pessoa associada

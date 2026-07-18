@@ -66,17 +66,23 @@ namespace ControleGastos.API.Services
 
             if (pessoa == null)
             {
+                _logger.LogWarning(
+                    "Tentativa de excluir pessoa inexistente. Id informado: {Id}",
+                    id
+                );
+
                 return false; // retorna falso caso a pessoa não exista
             }
 
             _context.Pessoas.Remove(pessoa);
-
             await _context.SaveChangesAsync();
+
 
             _logger.LogInformation(
                 "Pessoa excluída com sucesso. Id: {Id}",
                 id
             );
+
 
             return true; // retorna verdadeiro caso a pessoa tenha sido excluída com sucesso
         }

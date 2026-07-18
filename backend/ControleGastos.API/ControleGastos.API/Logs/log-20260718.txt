@@ -175,3 +175,44 @@ FROM [Pessoas] AS [p]
 2026-07-18 12:38:07.777 -03:00 [INF] Executed action ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API) in 9.573ms
 2026-07-18 12:38:07.777 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API)'
 2026-07-18 12:38:07.778 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/api/pessoas - 200 null application/json; charset=utf-8 12.4454ms
+2026-07-18 12:45:31.288 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-18 12:45:31.582 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-18 12:46:30.666 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-18 12:59:42.976 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-18 12:59:43.265 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-18 13:00:44.178 -03:00 [INF] Transação criada com sucesso. Id: 16, PessoaId: 10, Tipo: "Despesa", Valor: 300
+2026-07-18 13:01:49.073 -03:00 [WRN] Tentativa bloqueada. Pessoa menor de idade tentou cadastrar receita. PessoaId: 9
+2026-07-18 13:01:49.147 -03:00 [WRN] Requisição finalizada com erro. StatusCode: 500, Endpoint: /api/transacoes, Mensagem: Ocorreu um erro interno no servidor.
+2026-07-18 13:01:49.151 -03:00 [ERR] Erro interno não tratado na aplicação. Endpoint: /api/transacoes
+System.Exception: Pessoas menores de idade podem cadastrar apenas despesas.
+   at ControleGastos.API.Services.TransacaoService.CriarTransacaoAsync(CreateTransacaoDto dto) in C:\Projetos\ControleGastos\backend\ControleGastos.API\ControleGastos.API\Services\TransacaoService.cs:line 46
+   at ControleGastos.API.Controllers.TransacaoController.CriarTransacao(CreateTransacaoDto dto) in C:\Projetos\ControleGastos\backend\ControleGastos.API\ControleGastos.API\Controllers\TransacaoController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ControleGastos.API.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Projetos\ControleGastos\backend\ControleGastos.API\ControleGastos.API\Middleware\ExceptionMiddleware.cs:line 26
+2026-07-18 13:03:02.152 -03:00 [WRN] Requisição finalizada com erro. StatusCode: 404, Endpoint: /api/Relatorio/totais/99, Mensagem: Pessoa não encontrada.
+2026-07-18 13:06:58.432 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-18 13:06:58.757 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-18 13:07:35.495 -03:00 [WRN] Requisição finalizada com erro. StatusCode: 404, Endpoint: /api/Relatorio/totais/99, Mensagem: Pessoa não encontrada.
+2026-07-18 13:08:15.881 -03:00 [WRN] Tentativa de excluir pessoa inexistente. Id informado: 99
+2026-07-18 13:38:36.095 -03:00 [WRN] Tentativa bloqueada. Pessoa menor de idade tentou cadastrar receita. PessoaId: 9
+2026-07-18 13:38:36.158 -03:00 [WRN] Requisição finalizada com erro. StatusCode: 400, Endpoint: /api/transacoes, Mensagem: Pessoas menores de idade podem cadastrar apenas despesas.
+2026-07-18 13:39:21.581 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 14
+2026-07-18 13:40:00.969 -03:00 [INF] Consulta de transações por pessoa realizada com sucesso. PessoaId: 5, Quantidade encontrada: 6
+2026-07-18 13:43:48.171 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-18 13:43:48.524 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-18 13:44:09.231 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-18 13:44:09.237 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-18 13:44:28.887 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 5
+2026-07-18 13:44:50.181 -03:00 [WRN] Tentativa de gerar relatório para pessoa inexistente. PessoaId: 99
+2026-07-18 13:44:50.260 -03:00 [WRN] Requisição finalizada com erro. StatusCode: 404, Endpoint: /api/Relatorio/totais/99, Mensagem: Pessoa não encontrada.
