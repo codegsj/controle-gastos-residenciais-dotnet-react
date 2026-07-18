@@ -11,13 +11,18 @@ namespace ControleGastos.API
         public static void Main(string[] args)
         {
 
-            Log.Logger = new LoggerConfiguration() // Configuração do Serilog para registrar logs em arquivos de texto
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+
+                .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
+
+                .MinimumLevel.Override("Microsoft.EntityFrameworkCore", Serilog.Events.LogEventLevel.Error)
+
                 .WriteTo.File(
                     "Logs/log-.txt",
-                    rollingInterval: RollingInterval.Day
-                )
+                     rollingInterval: RollingInterval.Day
+                 )
                 .CreateLogger();
-
 
             try
             {

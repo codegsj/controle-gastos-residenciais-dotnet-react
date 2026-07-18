@@ -106,3 +106,72 @@ VALUES (@p0, @p1, @p2, @p3, @p4);
 2026-07-18 12:18:43.282 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/favicon.ico - null null
 2026-07-18 12:18:43.284 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/favicon.ico - 404 0 null 2.5085ms
 2026-07-18 12:18:43.285 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7102/favicon.ico, Response status code: 404
+2026-07-18 12:33:52.956 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-18 12:33:53.252 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-18 12:33:53.380 -03:00 [INF] Now listening on: https://localhost:7102
+2026-07-18 12:33:53.382 -03:00 [INF] Now listening on: http://localhost:5032
+2026-07-18 12:33:53.447 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-18 12:33:53.447 -03:00 [INF] Hosting environment: Development
+2026-07-18 12:33:53.447 -03:00 [INF] Content root path: C:\Projetos\ControleGastos\backend\ControleGastos.API\ControleGastos.API
+2026-07-18 12:33:54.854 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/swagger/index.html - null null
+2026-07-18 12:33:55.017 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/swagger/index.html - 200 null text/html;charset=utf-8 171.3564ms
+2026-07-18 12:33:55.370 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-18 12:33:55.370 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/_vs/browserLink - null null
+2026-07-18 12:33:55.374 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 3.9197ms
+2026-07-18 12:33:55.397 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.5994ms
+2026-07-18 12:33:55.836 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - null null
+2026-07-18 12:33:55.847 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.3904ms
+2026-07-18 12:34:26.550 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/api/pessoas - null null
+2026-07-18 12:34:26.558 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API)'
+2026-07-18 12:34:26.576 -03:00 [INF] Route matched with {action = "ListarPessoas", controller = "Pessoa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarPessoas() on controller ControleGastos.API.Controllers.PessoaController (ControleGastos.API).
+2026-07-18 12:34:27.486 -03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Idade], [p].[Nome]
+FROM [Pessoas] AS [p]
+2026-07-18 12:34:27.531 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 4
+2026-07-18 12:34:27.538 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ControleGastos.API.DTOs.PessoaResponseDto, ControleGastos.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-18 12:34:27.545 -03:00 [INF] Executed action ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API) in 967.3191ms
+2026-07-18 12:34:27.546 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API)'
+2026-07-18 12:34:27.551 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/api/pessoas - 200 null application/json; charset=utf-8 1000.5741ms
+2026-07-18 12:35:35.613 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7102/api/pessoas - application/json 38
+2026-07-18 12:35:35.616 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.PessoaController.CriarPessoa (ControleGastos.API)'
+2026-07-18 12:35:35.624 -03:00 [INF] Route matched with {action = "CriarPessoa", controller = "Pessoa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarPessoa(ControleGastos.API.DTOs.CreatePessoaDto) on controller ControleGastos.API.Controllers.PessoaController (ControleGastos.API).
+2026-07-18 12:35:35.655 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-07-18 12:35:35.671 -03:00 [INF] Executed action ControleGastos.API.Controllers.PessoaController.CriarPessoa (ControleGastos.API) in 46.8386ms
+2026-07-18 12:35:35.671 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.PessoaController.CriarPessoa (ControleGastos.API)'
+2026-07-18 12:35:35.671 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7102/api/pessoas - 400 null application/problem+json; charset=utf-8 58.6662ms
+2026-07-18 12:36:07.171 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7102/api/pessoas - application/json 37
+2026-07-18 12:36:07.172 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.PessoaController.CriarPessoa (ControleGastos.API)'
+2026-07-18 12:36:07.173 -03:00 [INF] Route matched with {action = "CriarPessoa", controller = "Pessoa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarPessoa(ControleGastos.API.DTOs.CreatePessoaDto) on controller ControleGastos.API.Controllers.PessoaController (ControleGastos.API).
+2026-07-18 12:36:07.291 -03:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Pessoas] ([Idade], [Nome])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-07-18 12:36:07.312 -03:00 [INF] Pessoa criada com sucesso. Id: 11, Nome: Andrea, Idade: 40
+2026-07-18 12:36:07.313 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ControleGastos.API.Models.Pessoa'.
+2026-07-18 12:36:07.334 -03:00 [INF] Executed action ControleGastos.API.Controllers.PessoaController.CriarPessoa (ControleGastos.API) in 160.9589ms
+2026-07-18 12:36:07.334 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.PessoaController.CriarPessoa (ControleGastos.API)'
+2026-07-18 12:36:07.334 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7102/api/pessoas - 201 null application/json; charset=utf-8 163.7668ms
+2026-07-18 12:36:34.487 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/api/transacoes - null null
+2026-07-18 12:36:34.489 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.TransacaoController.ListarTransacoes (ControleGastos.API)'
+2026-07-18 12:36:34.491 -03:00 [INF] Route matched with {action = "ListarTransacoes", controller = "Transacao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarTransacoes() on controller ControleGastos.API.Controllers.TransacaoController (ControleGastos.API).
+2026-07-18 12:36:34.619 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Data], [t].[Descricao], [t].[PessoaId], [t].[Tipo], [t].[Valor], [p].[Id], [p].[Idade], [p].[Nome]
+FROM [Transacoes] AS [t]
+INNER JOIN [Pessoas] AS [p] ON [t].[PessoaId] = [p].[Id]
+2026-07-18 12:36:34.639 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ControleGastos.API.DTOs.TransacaoResponseDto, ControleGastos.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-18 12:36:34.643 -03:00 [INF] Executed action ControleGastos.API.Controllers.TransacaoController.ListarTransacoes (ControleGastos.API) in 152.0646ms
+2026-07-18 12:36:34.644 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.TransacaoController.ListarTransacoes (ControleGastos.API)'
+2026-07-18 12:36:34.644 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/api/transacoes - 200 null application/json; charset=utf-8 157.2822ms
+2026-07-18 12:38:07.766 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/api/pessoas - null null
+2026-07-18 12:38:07.768 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API)'
+2026-07-18 12:38:07.768 -03:00 [INF] Route matched with {action = "ListarPessoas", controller = "Pessoa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarPessoas() on controller ControleGastos.API.Controllers.PessoaController (ControleGastos.API).
+2026-07-18 12:38:07.777 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Idade], [p].[Nome]
+FROM [Pessoas] AS [p]
+2026-07-18 12:38:07.777 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-18 12:38:07.777 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ControleGastos.API.DTOs.PessoaResponseDto, ControleGastos.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-18 12:38:07.777 -03:00 [INF] Executed action ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API) in 9.573ms
+2026-07-18 12:38:07.777 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.PessoaController.ListarPessoas (ControleGastos.API)'
+2026-07-18 12:38:07.778 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/api/pessoas - 200 null application/json; charset=utf-8 12.4454ms
