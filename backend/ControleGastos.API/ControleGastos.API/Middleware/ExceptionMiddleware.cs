@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Text.Json;
+using ControleGastos.API.Exceptions;
 
 namespace ControleGastos.API.Middleware
 {
@@ -7,7 +8,7 @@ namespace ControleGastos.API.Middleware
     {
         private readonly RequestDelegate _next;
 
-        public ExceptionMiddleware(RequestDelegate next) 
+        public ExceptionMiddleware(RequestDelegate next)
         {
             _next = next;
         }
@@ -33,9 +34,22 @@ namespace ControleGastos.API.Middleware
             context.Response.ContentType = "application/json";
 
 
+            var statusCode = exception switch
+            {
+                NotFoundException => StatusCodes.Status404NotFound,
+
+                BusinessException => StatusCodes.Status400BadRequest,
+
+                _ => StatusCodes.Status500InternalServerError
+            };
+
+
+            context.Response.StatusCode = statusCode;
+
+
             var response = new
             {
-                statusCode = context.Response.StatusCode,
+                statusCode = statusCode,
                 message = exception.Message,
                 timestamp = DateTime.UtcNow
             };

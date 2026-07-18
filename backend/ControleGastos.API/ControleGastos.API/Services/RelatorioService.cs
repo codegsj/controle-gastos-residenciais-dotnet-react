@@ -1,6 +1,7 @@
 ﻿using ControleGastos.API.Data;
 using ControleGastos.API.DTOs;
 using ControleGastos.API.Models;
+using ControleGastos.API.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace ControleGastos.API.Services
@@ -43,6 +44,7 @@ namespace ControleGastos.API.Services
                     p.Transacoes
                     .Where(t => t.Tipo == TipoTransacao.Despesa)
                     .Sum(t => t.Valor)
+
             }).ToList();
 
 
@@ -66,6 +68,7 @@ namespace ControleGastos.API.Services
             };
         }
 
+
         public async Task<ConsultaTotaisDto?> ObterTotaisPorPessoaAsync(int pessoaId) // método assíncrono que retorna um objeto do tipo ConsultaTotaisDto contendo os totais de receitas, despesas e saldo líquido de uma pessoa específica cadastrada no sistema
         {
             var pessoa = await _context.Pessoas
@@ -73,9 +76,9 @@ namespace ControleGastos.API.Services
                 .FirstOrDefaultAsync(p => p.Id == pessoaId);
 
 
-            if (pessoa == null) // verifica se a pessoa existe no banco de dados, caso não exista retorna null
+            if (pessoa == null) // verifica se a pessoa existe no banco de dados, caso não exista retorna uma exceção de pessoa não encontrada
             {
-                return null;
+                throw new NotFoundException("Pessoa não encontrada.");
             }
 
 

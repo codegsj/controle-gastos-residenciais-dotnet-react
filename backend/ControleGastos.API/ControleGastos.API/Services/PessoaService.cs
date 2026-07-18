@@ -8,6 +8,7 @@ namespace ControleGastos.API.Services
     public class PessoaService // classe responsável por salvar, buscar e excluir pessoas no banco de dados
     {
         private readonly ApplicationDbContext _context;
+
         public PessoaService(ApplicationDbContext context) // construtor que recebe o contexto do banco de dados
         {
             _context = context;
@@ -21,10 +22,12 @@ namespace ControleGastos.API.Services
                 Idade = dto.Idade
             };
 
-            _context.Pessoas.Add(pessoa); 
+            _context.Pessoas.Add(pessoa);
             await _context.SaveChangesAsync();
+
             return pessoa;
         }
+
 
         public async Task<List<PessoaResponseDto>> ListarPessoasAsync() // método que lista todas as pessoas do banco de dados 
         {
@@ -40,15 +43,20 @@ namespace ControleGastos.API.Services
             }).ToList();
         }
 
+
         public async Task<bool> ExcluirPessoaAsync(int id) // método que exclui uma pessoa do banco de dados
         {
             var pessoa = await _context.Pessoas.FindAsync(id);
+
             if (pessoa == null)
             {
                 return false; // retorna falso caso a pessoa não exista
             }
+
             _context.Pessoas.Remove(pessoa);
+
             await _context.SaveChangesAsync();
+
             return true; // retorna verdadeiro caso a pessoa tenha sido excluída com sucesso
         }
     }
