@@ -43,5 +43,25 @@ namespace ControleGastos.API.Services
             await _context.SaveChangesAsync();
             return transacao;
         }
+
+        public async Task<List<TransacaoResponseDto>> ListarTransacoesAsync() // metodo para listar todas as transações, incluindo o nome da pessoa associada a cada transação
+        {
+            var transacoes = await _context.Transacoes
+                .Include(t => t.Pessoa)
+                .ToListAsync();
+
+
+            return transacoes.Select(t => new TransacaoResponseDto // Mapeia cada transação para um DTO de resposta, incluindo o nome da pessoa associada
+            {
+                Id = t.Id,
+                Descricao = t.Descricao,
+                Valor = t.Valor,
+                Tipo = t.Tipo,
+                Data = t.Data,
+                PessoaId = t.PessoaId,
+                NomePessoa = t.Pessoa.Nome
+            }).ToList();
+        }
+
     }
 }

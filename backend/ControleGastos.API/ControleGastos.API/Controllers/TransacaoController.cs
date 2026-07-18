@@ -38,5 +38,12 @@ namespace ControleGastos.API.Controllers //
                 });
             }
         }
+
+        [HttpGet] // endpoint para listar todas as transações
+        public async Task<IActionResult> ListarTransacoes() // método que chama o serviço para listar todas as transações do banco de dados
+        {
+            var transacoes = await _service.ListarTransacoesAsync(); 
+            return Ok(transacoes); // retorna um status code 200 (OK) com a lista de transações ou vazia [] se não houver transações cadastradas (colocar mensagem de nenhuma transacao encontrada e registrar em logs )
+        }
     }
 }
