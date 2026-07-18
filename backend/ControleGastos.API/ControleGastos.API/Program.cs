@@ -1,4 +1,5 @@
 using ControleGastos.API.Data;
+using ControleGastos.API.Middleware;
 using ControleGastos.API.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,6 +30,7 @@ namespace ControleGastos.API
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+            app.UseMiddleware<ExceptionMiddleware>();
 
             if (app.Environment.IsDevelopment())
             {

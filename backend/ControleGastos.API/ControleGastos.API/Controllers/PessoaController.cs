@@ -6,9 +6,10 @@ namespace ControleGastos.API.Controllers
 {
     [ApiController]
     [Route("api/pessoas")]
-    public class PessoaController : ControllerBase // // responsável por receber requisições relacionadas às pessoas e delegar as operações para o serviço.
+    public class PessoaController : ControllerBase  // responsável por receber requisições relacionadas às pessoas e delegar as operações para o serviço.
+                                                    // try catch foi removido do controller e adicionado no middleware de tratamento de exceções, para centralizar o tratamento de erros e evitar duplicação de código.
     {
-      private readonly PessoaService _service;
+        private readonly PessoaService _service;
 
       public PessoaController(PessoaService service) // construtor que recebe o serviço de pessoa
         {
@@ -39,7 +40,8 @@ namespace ControleGastos.API.Controllers
             var removido = await _service.ExcluirPessoaAsync(id); // chama o serviço para excluir a pessoa do banco de dados
             if (!removido) // verifica se a pessoa foi excluída com sucesso
             {
-                return NotFound(new {mensagem = "Pessoa não encontrada."}); // retorna um erro caso a pessoa não exista
+                return NotFound(new {mensagem = "Pessoa não encontrada."
+                }); // retorna um erro caso a pessoa não exista
             }
             return NoContent(); // retorna o status 204 caso a pessoa tenha sido excluída com sucesso
         }

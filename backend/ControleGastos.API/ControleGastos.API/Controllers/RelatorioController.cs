@@ -6,6 +6,7 @@ namespace ControleGastos.API.Controllers
     [ApiController]
     [Route("api/[controller]")]
     public class RelatorioController : ControllerBase // responsável por receber requisições relacionadas aos relatórios e delegar as operações para o serviço.
+                                                      // try catch foi removido do controller e adicionado no middleware de tratamento de exceções, para centralizar o tratamento de erros e evitar duplicação de código.
     {
         private readonly RelatorioService _service;
 
@@ -15,29 +16,19 @@ namespace ControleGastos.API.Controllers
         }
 
 
-        [HttpGet("totais")] // endpoint para obter os totais de receitas, despesas e saldo líquido de todas as pessoas cadastradas no sistema
+        [HttpGet("totais")] // endpoint para obter os totais de receitas, despesas e saldo de todas as pessoas
         public async Task<IActionResult> ObterTotais()
         {
-            try
-            {
-                var resultado = await _service.ObterTotaisAsync();
+            var resultado = await _service.ObterTotaisAsync();
 
-                return Ok(resultado);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new
-                {   
-                    mensagem = ex.Message
-                });
-            }
+            return Ok(resultado);
         }
+
 
         [HttpGet("totais/{pessoaId}")] // endpoint para obter os totais de receitas, despesas e saldo de uma pessoa específica
         public async Task<IActionResult> ObterTotaisPorPessoa(int pessoaId)
         {
             var resultado = await _service.ObterTotaisPorPessoaAsync(pessoaId);
-
 
             if (resultado == null)
             {
@@ -47,8 +38,9 @@ namespace ControleGastos.API.Controllers
                 });
             }
 
-
             return Ok(resultado);
         }
     }
 }
+
+// try catch foi removido do controller e adicionado no middleware de tratamento de exceções, para centralizar o tratamento de erros e evitar duplicação de código.

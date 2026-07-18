@@ -2,66 +2,50 @@
 using ControleGastos.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ControleGastos.API.Controllers // 
+namespace ControleGastos.API.Controllers
 {
     [ApiController]
     [Route("api/transacoes")]
     public class TransacaoController : ControllerBase // responsável por receber requisições relacionadas às transações e delegar as operações para o serviço.
+                                                      // try catch foi removido do controller e adicionado no middleware de tratamento de exceções, para centralizar o tratamento de erros e evitar duplicação de código.
     {
         private readonly TransacaoService _service;
 
-        public TransacaoController(TransacaoService service) // construtor que recebe o serviço de transação
+        public TransacaoController(TransacaoService service)
         {
             _service = service;
         }
 
 
-        [HttpPost] // endpoint para criar uma nova transação
-        public async Task<IActionResult> CriarTransacao( // método que recebe os dados da transação e chama o serviço para criar a transação no banco de dados
+        [HttpPost]
+        public async Task<IActionResult> CriarTransacao( // endpoint para criar uma nova transação
             [FromBody] CreateTransacaoDto dto)
         {
-            try
-            {
-                var transacao = await _service.CriarTransacaoAsync(dto); // chama o serviço para criar a transação no banco de dados
+            var transacao = await _service.CriarTransacaoAsync(dto); // chama o serviço para criar a transação com base nos dados recebidos no corpo da requisição
 
-                return CreatedAtAction( // retorna um status code 201 (Created) com a localização da nova transação criada
-                    nameof(CriarTransacao),
-                    new { id = transacao.Id },
-                    transacao
-                );
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new // retorna um status code 400 (Bad Request) com a mensagem de erro caso ocorra alguma exceção
-                {
-                    mensagem = ex.Message
-                });
-            }
+            return CreatedAtAction(
+                nameof(CriarTransacao),
+                new { id = transacao.Id },
+                transacao
+            );
         }
 
-        [HttpGet] // endpoint para listar todas as transações
-        public async Task<IActionResult> ListarTransacoes() // método que chama o serviço para listar todas as transações do banco de dados
+
+        [HttpGet]
+        public async Task<IActionResult> ListarTransacoes() // endpoint para listar todas as transações
         {
-            var transacoes = await _service.ListarTransacoesAsync(); 
-            return Ok(transacoes); // retorna um status code 200 (OK) com a lista de transações ou vazia [] se não houver transações cadastradas (colocar mensagem de nenhuma transacao encontrada e registrar em logs )
+            var transacoes = await _service.ListarTransacoesAsync(); // chama o serviço para listar todas as trans
+
+            return Ok(transacoes);
         }
 
-        [HttpGet("/api/pessoas/{pessoaId}/transacoes")] // endpoint para listar todas as transações de uma pessoa específica
-        public async Task<IActionResult> ObterTransacoesPorPessoa(int pessoaId)
-        {
-            try
-            {
-                var transacoes = await _service.ObterTransacoesPorPessoaAsync(pessoaId); // chama o serviço para obter as transações da pessoa específica
 
-                return Ok(transacoes);
-            }
-            catch (Exception ex)
-            {
-                return NotFound(new
-                {
-                    mensagem = ex.Message
-                });
-            }
+        [HttpGet("/api/pessoas/{pessoaId}/transacoes")]
+        public async Task<IActionResult> ObterTransacoesPorPessoa(int pessoaId) // endpoint para obter as transações de uma pessoa específica
+        {
+            var transacoes = await _service.ObterTransacoesPorPessoaAsync(pessoaId); // chama o serviço para obter as transações da pessoa com base no id recebido na rota
+
+            return Ok(transacoes);
         }
     }
 }
