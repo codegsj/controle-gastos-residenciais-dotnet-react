@@ -26,11 +26,18 @@ namespace ControleGastos.API.Services
             return pessoa;
         }
 
-        public async Task<List<Pessoa>> ListarPessoasAsync() // método que lista todas as pessoas no banco de dados
+        public async Task<List<PessoaResponseDto>> ListarPessoasAsync() // método que lista todas as pessoas do banco de dados 
         {
-            return await _context.Pessoas
-                .Include(p => p.Transacoes)
+            var pessoas = await _context.Pessoas
                 .ToListAsync();
+
+
+            return pessoas.Select(p => new PessoaResponseDto
+            {
+                Id = p.Id,
+                Nome = p.Nome,
+                Idade = p.Idade
+            }).ToList();
         }
 
         public async Task<bool> ExcluirPessoaAsync(int id) // método que exclui uma pessoa do banco de dados
