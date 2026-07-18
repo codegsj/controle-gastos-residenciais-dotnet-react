@@ -65,5 +65,38 @@ namespace ControleGastos.API.Services
                 TotalGeral = totalGeral
             };
         }
+
+        public async Task<ConsultaTotaisDto?> ObterTotaisPorPessoaAsync(int pessoaId) // método assíncrono que retorna um objeto do tipo ConsultaTotaisDto contendo os totais de receitas, despesas e saldo líquido de uma pessoa específica cadastrada no sistema
+        {
+            var pessoa = await _context.Pessoas
+                .Include(p => p.Transacoes)
+                .FirstOrDefaultAsync(p => p.Id == pessoaId);
+
+
+            if (pessoa == null) // verifica se a pessoa existe no banco de dados, caso não exista retorna null
+            {
+                return null;
+            }
+
+
+            var receitas = pessoa.Transacoes // calcula o total de receitas da pessoa, somando os valores das transferências do tipo Receita
+                .Where(t => t.Tipo == TipoTransacao.Receita)
+                .Sum(t => t.Valor);
+
+
+            var despesas = pessoa.Transacoes // calcula o total de despesas da pessoa, somando os valores das transferências do tipo Despesa
+                .Where(t => t.Tipo == TipoTransacao.Despesa)
+                .Sum(t => t.Valor);
+
+
+            return new ConsultaTotaisDto // retorna um objeto do tipo ConsultaTotaisDto contendo os totais de receitas, despesas e saldo líquido da pessoa específica
+            {
+                PessoaId = pessoa.Id,
+                NomePessoa = pessoa.Nome,
+                TotalReceitas = receitas,
+                TotalDespesas = despesas,
+                Saldo = receitas - despesas
+            };
+        }
     }
 }
