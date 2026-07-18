@@ -27,7 +27,7 @@ namespace ControleGastos.API.Controllers
             catch (Exception ex)
             {
                 return BadRequest(new
-                {
+                {   
                     mensagem = ex.Message
                 });
             }
