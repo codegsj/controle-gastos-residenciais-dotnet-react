@@ -13,3 +13,96 @@
 2026-07-18 11:47:56.212 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.8809ms
 2026-07-18 11:47:56.683 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - null null
 2026-07-18 11:47:56.700 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.2585ms
+2026-07-18 12:09:26.678 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-18 12:09:26.972 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-18 12:09:27.096 -03:00 [INF] Now listening on: https://localhost:7102
+2026-07-18 12:09:27.098 -03:00 [INF] Now listening on: http://localhost:5032
+2026-07-18 12:09:27.165 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-18 12:09:27.165 -03:00 [INF] Hosting environment: Development
+2026-07-18 12:09:27.165 -03:00 [INF] Content root path: C:\Projetos\ControleGastos\backend\ControleGastos.API\ControleGastos.API
+2026-07-18 12:09:28.069 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/swagger/index.html - null null
+2026-07-18 12:09:28.228 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/swagger/index.html - 200 null text/html;charset=utf-8 168.3138ms
+2026-07-18 12:09:28.561 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/_vs/browserLink - null null
+2026-07-18 12:09:28.561 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-18 12:09:28.565 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 4.3255ms
+2026-07-18 12:09:28.597 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.6021ms
+2026-07-18 12:09:29.051 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - null null
+2026-07-18 12:09:29.061 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.0523ms
+2026-07-18 12:10:23.374 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7102/api/transacoes - application/json 112
+2026-07-18 12:10:23.384 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:10:23.405 -03:00 [INF] Route matched with {action = "CriarTransacao", controller = "Transacao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarTransacao(ControleGastos.API.DTOs.CreateTransacaoDto) on controller ControleGastos.API.Controllers.TransacaoController (ControleGastos.API).
+2026-07-18 12:10:23.934 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transacao'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-07-18 12:10:24.478 -03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__dto_PessoaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Idade], [p].[Nome]
+FROM [Pessoas] AS [p]
+WHERE [p].[Id] = @__dto_PessoaId_0
+2026-07-18 12:10:24.547 -03:00 [INF] Executed action ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API) in 1140.4207ms
+2026-07-18 12:10:24.549 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:10:24.594 -03:00 [WRN] Requisição finalizada com erro. StatusCode: 404, Endpoint: /api/transacoes, Mensagem: Pessoa não encontrada.
+2026-07-18 12:10:24.609 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7102/api/transacoes - 404 null application/json 1235.0293ms
+2026-07-18 12:10:36.103 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7102/api/transacoes - application/json 110
+2026-07-18 12:10:36.104 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:10:36.105 -03:00 [INF] Route matched with {action = "CriarTransacao", controller = "Transacao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarTransacao(ControleGastos.API.DTOs.CreateTransacaoDto) on controller ControleGastos.API.Controllers.TransacaoController (ControleGastos.API).
+2026-07-18 12:10:36.123 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_PessoaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Idade], [p].[Nome]
+FROM [Pessoas] AS [p]
+WHERE [p].[Id] = @__dto_PessoaId_0
+2026-07-18 12:10:36.268 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Transacoes] ([Data], [Descricao], [PessoaId], [Tipo], [Valor])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-07-18 12:10:36.290 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ControleGastos.API.Models.Transacao'.
+2026-07-18 12:10:36.311 -03:00 [INF] Executed action ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API) in 205.852ms
+2026-07-18 12:10:36.311 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:10:36.311 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7102/api/transacoes - 201 null application/json; charset=utf-8 208.649ms
+2026-07-18 12:11:21.704 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7102/api/transacoes - application/json 110
+2026-07-18 12:11:21.705 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:11:21.706 -03:00 [INF] Route matched with {action = "CriarTransacao", controller = "Transacao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarTransacao(ControleGastos.API.DTOs.CreateTransacaoDto) on controller ControleGastos.API.Controllers.TransacaoController (ControleGastos.API).
+2026-07-18 12:11:21.758 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__dto_PessoaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Idade], [p].[Nome]
+FROM [Pessoas] AS [p]
+WHERE [p].[Id] = @__dto_PessoaId_0
+2026-07-18 12:11:21.783 -03:00 [INF] Executed action ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API) in 76.959ms
+2026-07-18 12:11:21.783 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:11:21.806 -03:00 [WRN] Requisição finalizada com erro. StatusCode: 400, Endpoint: /api/transacoes, Mensagem: Pessoas menores de idade podem cadastrar apenas despesas.
+2026-07-18 12:11:21.807 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7102/api/transacoes - 400 null application/json 103.06ms
+2026-07-18 12:12:32.695 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/favicon.ico - null null
+2026-07-18 12:12:32.698 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/favicon.ico - 404 0 null 3.1116ms
+2026-07-18 12:12:32.699 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7102/favicon.ico, Response status code: 404
+2026-07-18 12:17:33.427 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-18 12:17:33.839 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-18 12:17:33.977 -03:00 [INF] Now listening on: https://localhost:7102
+2026-07-18 12:17:33.979 -03:00 [INF] Now listening on: http://localhost:5032
+2026-07-18 12:17:34.041 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-18 12:17:34.042 -03:00 [INF] Hosting environment: Development
+2026-07-18 12:17:34.042 -03:00 [INF] Content root path: C:\Projetos\ControleGastos\backend\ControleGastos.API\ControleGastos.API
+2026-07-18 12:17:35.168 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/swagger/index.html - null null
+2026-07-18 12:17:35.345 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/swagger/index.html - 200 null text/html;charset=utf-8 186.082ms
+2026-07-18 12:17:35.350 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-18 12:17:35.354 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 4.4955ms
+2026-07-18 12:17:35.645 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/_vs/browserLink - null null
+2026-07-18 12:17:35.685 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.8188ms
+2026-07-18 12:17:36.256 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - null null
+2026-07-18 12:17:36.272 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.546ms
+2026-07-18 12:18:17.982 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7102/api/transacoes - application/json 119
+2026-07-18 12:18:17.989 -03:00 [INF] Executing endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:18:18.009 -03:00 [INF] Route matched with {action = "CriarTransacao", controller = "Transacao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarTransacao(ControleGastos.API.DTOs.CreateTransacaoDto) on controller ControleGastos.API.Controllers.TransacaoController (ControleGastos.API).
+2026-07-18 12:18:19.047 -03:00 [INF] Executed DbCommand (45ms) [Parameters=[@__dto_PessoaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Idade], [p].[Nome]
+FROM [Pessoas] AS [p]
+WHERE [p].[Id] = @__dto_PessoaId_0
+2026-07-18 12:18:19.231 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Transacoes] ([Data], [Descricao], [PessoaId], [Tipo], [Valor])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-07-18 12:18:19.258 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ControleGastos.API.Models.Transacao'.
+2026-07-18 12:18:19.284 -03:00 [INF] Executed action ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API) in 1272.1995ms
+2026-07-18 12:18:19.284 -03:00 [INF] Executed endpoint 'ControleGastos.API.Controllers.TransacaoController.CriarTransacao (ControleGastos.API)'
+2026-07-18 12:18:19.290 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7102/api/transacoes - 201 null application/json; charset=utf-8 1309.1825ms
+2026-07-18 12:18:43.282 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7102/favicon.ico - null null
+2026-07-18 12:18:43.284 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7102/favicon.ico - 404 0 null 2.5085ms
+2026-07-18 12:18:43.285 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7102/favicon.ico, Response status code: 404

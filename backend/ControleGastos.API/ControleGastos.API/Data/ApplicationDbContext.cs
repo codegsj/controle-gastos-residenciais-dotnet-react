@@ -13,6 +13,7 @@ namespace ControleGastos.API.Data
 
         public DbSet<Transacao> Transacoes { get; set; } // representa a tabela de transações no banco de dados
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Pessoa>()
@@ -20,7 +21,11 @@ namespace ControleGastos.API.Data
                 .WithOne(t => t.Pessoa) // uma transação pertence a uma pessoa
                 .HasForeignKey(t => t.PessoaId) // a chave estrangeira da transação é o Id da pessoa
                 .OnDelete(DeleteBehavior.Cascade); // quando uma pessoa for deletada, suas transações também serão deletadas
+
+
+            modelBuilder.Entity<Transacao>()
+                .Property(t => t.Valor)
+                .HasPrecision(18, 2); // define a precisão do valor da transação no banco de dados
         }
     }
 }
-    

@@ -7,10 +7,15 @@ namespace ControleGastos.API.Middleware
     public class ExceptionMiddleware // Middleware para tratamento de exceções globais na aplicação
     {
         private readonly RequestDelegate _next;
+        private readonly ILogger<ExceptionMiddleware> _logger;
 
-        public ExceptionMiddleware(RequestDelegate next)
+
+        public ExceptionMiddleware(
+            RequestDelegate next,
+            ILogger<ExceptionMiddleware> logger)
         {
             _next = next;
+            _logger = logger;
         }
 
 
@@ -20,39 +25,57 @@ namespace ControleGastos.API.Middleware
             {
                 await _next(context);
             }
+            catch (NotFoundException ex)
+            {
+                await HandleExceptionAsync(
+                    context,
+                    HttpStatusCode.NotFound,
+                    ex.Message);
+            }
+            catch (BusinessException ex)
+            {
+                await HandleExceptionAsync(
+                    context,
+                    HttpStatusCode.BadRequest,
+                    ex.Message);
+            }
             catch (Exception ex)
             {
-                await HandleExceptionAsync(context, ex);
+                await HandleExceptionAsync( // trata exceções não tratadas, retornando um status code 500 (Internal Server Error) e registrando o erro no log
+                    context,
+                    HttpStatusCode.InternalServerError,
+                    "Ocorreu um erro interno no servidor.");
+
+                _logger.LogError(
+                    ex,
+                    "Erro interno não tratado na aplicação. Endpoint: {Endpoint}",
+                    context.Request.Path);
             }
         }
 
 
-        private static async Task HandleExceptionAsync( // método que trata a exceção lançada e retorna uma resposta HTTP com o status code e a mensagem de erro
+        private async Task HandleExceptionAsync( // método auxiliar para tratar exceções e retornar uma resposta JSON com o status code e a mensagem de erro
             HttpContext context,
-            Exception exception)
+            HttpStatusCode statusCode,
+            string message)
         {
             context.Response.ContentType = "application/json";
-
-
-            var statusCode = exception switch
-            {
-                NotFoundException => StatusCodes.Status404NotFound,
-
-                BusinessException => StatusCodes.Status400BadRequest,
-
-                _ => StatusCodes.Status500InternalServerError
-            };
-
-
-            context.Response.StatusCode = statusCode;
+            context.Response.StatusCode = (int)statusCode;
 
 
             var response = new
             {
-                statusCode = statusCode,
-                message = exception.Message,
+                statusCode = context.Response.StatusCode,
+                message = message,
                 timestamp = DateTime.UtcNow
             };
+
+             
+            _logger.LogWarning( // registra uma mensagem de log de aviso com informações sobre a requisição que gerou a exceção
+                "Requisição finalizada com erro. StatusCode: {StatusCode}, Endpoint: {Endpoint}, Mensagem: {Message}",
+                context.Response.StatusCode,
+                context.Request.Path,
+                message);
 
 
             var json = JsonSerializer.Serialize(response);
@@ -62,9 +85,3 @@ namespace ControleGastos.API.Middleware
         }
     }
 }
-
-/* middleware é para coisas inesperadas
-banco cair
-erro no código
-falha de conexão
-exceção não tratada */
