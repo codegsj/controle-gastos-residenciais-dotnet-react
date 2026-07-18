@@ -9,6 +9,9 @@ Sistema de controle de gastos residenciais desenvolvido para processo seletivo.
 - .NET 8
 - Entity Framework Core
 - SQL Server
+- Serilog
+- Postaman
+- Swagger
 
 ### Frontend
 - React
