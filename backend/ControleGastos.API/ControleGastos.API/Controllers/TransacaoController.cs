@@ -45,5 +45,23 @@ namespace ControleGastos.API.Controllers //
             var transacoes = await _service.ListarTransacoesAsync(); 
             return Ok(transacoes); // retorna um status code 200 (OK) com a lista de transações ou vazia [] se não houver transações cadastradas (colocar mensagem de nenhuma transacao encontrada e registrar em logs )
         }
+
+        [HttpGet("/api/pessoas/{pessoaId}/transacoes")] // endpoint para listar todas as transações de uma pessoa específica
+        public async Task<IActionResult> ObterTransacoesPorPessoa(int pessoaId)
+        {
+            try
+            {
+                var transacoes = await _service.ObterTransacoesPorPessoaAsync(pessoaId); // chama o serviço para obter as transações da pessoa específica
+
+                return Ok(transacoes);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new
+                {
+                    mensagem = ex.Message
+                });
+            }
+        }
     }
 }

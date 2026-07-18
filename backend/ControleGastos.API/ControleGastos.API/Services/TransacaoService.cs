@@ -63,5 +63,34 @@ namespace ControleGastos.API.Services
             }).ToList();
         }
 
+        public async Task<List<TransacaoResponseDto>> ObterTransacoesPorPessoaAsync(int pessoaId) // metodo para obter todas as transações de uma pessoa específica, incluindo o nome da pessoa associada a cada transação
+        {
+            var pessoaExiste = await _context.Pessoas
+                .AnyAsync(p => p.Id == pessoaId);
+
+            if (!pessoaExiste)
+            {
+                throw new Exception("Pessoa não encontrada."); // Lança uma exceção se a pessoa não for encontrada no banco de dados
+            }
+
+
+            var transacoes = await _context.Transacoes
+                .Include(t => t.Pessoa)
+                .Where(t => t.PessoaId == pessoaId)
+                .ToListAsync();
+
+
+            return transacoes.Select(t => new TransacaoResponseDto // Mapeia cada transação para um DTO de resposta, incluindo o nome da pessoa associada
+            {
+                Id = t.Id,
+                Descricao = t.Descricao,
+                Valor = t.Valor,
+                Tipo = t.Tipo,
+                Data = t.Data,
+                PessoaId = t.PessoaId,
+                NomePessoa = t.Pessoa.Nome
+            }).ToList();
+        }
+
     }
 }
