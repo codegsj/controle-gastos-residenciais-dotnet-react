@@ -15,6 +15,7 @@ namespace ControleGastos.API
 
             builder.Services.AddScoped<PessoaService>(); // injeção de dependência para utilizar o serviço PessoaService
             builder.Services.AddScoped<TransacaoService>(); // injeção de dependência para utilizar o serviço TransacaoService
+            builder.Services.AddScoped<RelatorioService>(); // injeção de dependência para utilizar o serviço RelatorioService
 
             builder.Services.AddControllers() // injeção de dependência para utilizar o serviço de controllers 
                     .AddJsonOptions(options =>
@@ -22,9 +23,6 @@ namespace ControleGastos.API
                         options.JsonSerializerOptions.ReferenceHandler = 
                          System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
                     });
-
-
-
 
 
             builder.Services.AddEndpointsApiExplorer();
