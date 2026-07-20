@@ -1,0 +1,26 @@
+/* estrutura principal da aplicação */
+
+.layout {
+
+
+    display: flex;
+
+
+}
+
+
+/* área onde ficam as páginas */
+
+.content {
+
+
+    margin-left: 240px;
+
+
+    padding: 30px;
+
+
+    width: calc(100% - 240px);
+
+
+}

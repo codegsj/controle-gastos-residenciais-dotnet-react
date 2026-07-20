@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
 
+import "./Sidebar.css";
+
+
 export default function Sidebar() {
 
-    // componente responsável pelo menu lateral da aplicação
+
+    // componente responsável pelo menu lateral
+    // da aplicação
+
 
     return (
-        <aside>
+
+        <aside className="sidebar">
+
 
             <h2>
                 Controle de Gastos
@@ -14,31 +22,36 @@ export default function Sidebar() {
 
             <nav>
 
-                {/* link para página inicial */}
+
+                {/* acesso ao dashboard */}
                 <Link to="/">
                     Dashboard
                 </Link>
 
 
-                {/* link para cadastro e consulta de pessoas */}
+                {/* acesso ao gerenciamento de pessoas */}
                 <Link to="/pessoas">
                     Pessoas
                 </Link>
 
 
-                {/* link para gerenciamento das transações */}
+                {/* acesso ao gerenciamento das transações */}
                 <Link to="/transacoes">
                     Transações
                 </Link>
 
 
-                {/* link para visualização dos relatórios */}
+                {/* acesso aos relatórios */}
                 <Link to="/relatorios">
                     Relatórios
                 </Link>
 
+
             </nav>
 
+
         </aside>
+
     );
+
 }

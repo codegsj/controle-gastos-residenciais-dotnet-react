@@ -1,14 +1,21 @@
-// interface representa o formato dos dados de uma pessoa
+// representa a entidade Pessoa que vem da API .NET
 
 export interface Pessoa {
 
-    // identificador único da pessoa no banco de dados
+
+    // identificador da pessoa
+
     id: number;
 
-    // nome da pessoa cadastrada
+
+    // nome cadastrado
+
     nome: string;
 
-    // idade da pessoa cadastrada
+
+    // idade da pessoa
+
     idade: number;
+
 
 }

@@ -1,0 +1,19 @@
+2026-07-20 10:07:17.640 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-20 10:07:17.953 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-20 10:08:10.831 -03:00 [INF] Iniciando a aplicação Controle de Gastos.
+2026-07-20 10:08:11.202 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
+2026-07-20 10:08:37.647 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:09:43.303 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:09:43.344 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:23.906 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:23.911 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:24.418 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:24.423 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:25.923 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:25.927 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:36.196 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:36.201 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:36.206 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:41.305 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:41.309 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:15:41.313 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5

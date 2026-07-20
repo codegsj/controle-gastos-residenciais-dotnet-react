@@ -1,28 +1,33 @@
 import { Outlet } from "react-router-dom";
+
 import Sidebar from "../components/Sidebar";
+
+import "./MainLayout.css";
 
 
 export default function MainLayout() {
 
 
     // layout principal da aplicação
-    // responsável por manter elementos fixos
-    // enquanto as páginas mudam
+    // mantém o menu fixo
+    // e altera somente o conteúdo das páginas
 
 
     return (
 
-        <div>
+        <div className="layout">
 
 
-            {/* menu lateral fixo */}
+            {/* menu lateral */}
             <Sidebar />
 
 
-            {/* área onde as páginas serão renderizadas */}
-            <main>
+            {/* conteúdo das páginas */}
+            <main className="content">
+
 
                 <Outlet />
+
 
             </main>
 
@@ -30,4 +35,5 @@ export default function MainLayout() {
         </div>
 
     );
+
 }

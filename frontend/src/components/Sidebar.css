@@ -1,0 +1,65 @@
+/* estilo do menu lateral */
+
+.sidebar {
+
+    width: 240px;
+    height: 100vh;
+
+    background-color: #1f2937;
+
+    color: white;
+
+    padding: 20px;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+}
+
+
+/* titulo do sistema */
+
+.sidebar h2 {
+
+    margin-bottom: 30px;
+
+}
+
+
+/* área dos links */
+
+.sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+/* links do menu */
+
+.sidebar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+}
+
+
+/* efeito quando passar o mouse */
+
+.sidebar a:hover {
+
+    background-color: #374151;
+
+}

@@ -1,0 +1,53 @@
+.card {
+
+
+    background-color: white;
+
+
+    border-radius: 10px;
+
+
+    padding: 20px;
+
+
+    width: 220px;
+
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+
+}
+
+
+/* título do card */
+
+.card h3 {
+
+
+    font-size: 18px;
+
+
+    margin-bottom: 10px;
+
+
+    color: #374151;
+
+
+}
+
+
+/* valor exibido */
+
+.card p {
+
+
+    font-size: 24px;
+
+
+    font-weight: bold;
+
+
+    color: #111827;
+
+
+}

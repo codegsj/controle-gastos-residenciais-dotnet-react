@@ -31,6 +31,18 @@ namespace ControleGastos.API
 
                 var builder = WebApplication.CreateBuilder(args);
 
+                // permite comunicação entre o frontend React e a API
+                builder.Services.AddCors(options =>
+                {
+                    options.AddPolicy("frontend", policy =>
+                    {
+                        policy
+                            .WithOrigins("http://localhost:5173")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+                });
+
                 builder.Host.UseSerilog();
 
 
@@ -70,6 +82,8 @@ namespace ControleGastos.API
 
 
                 app.UseHttpsRedirection();
+
+                app.UseCors("frontend");  // habilita o CORS para permitir comunicação entre o frontend React e a API
 
                 app.UseAuthorization();
 
