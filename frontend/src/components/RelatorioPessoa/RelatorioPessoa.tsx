@@ -27,35 +27,21 @@ import "./RelatorioPessoa.css";
 
 
 
-
-
 // componente responsável pelo relatório individual da pessoa
 
 export default function RelatorioPessoa() {
 
 
 
-
-    // lista usada no select
-
     const [pessoas, setPessoas] = useState<Pessoa[]>([]);
 
 
-
-
-
-    // pessoa selecionada
 
     const [pessoaSelecionada, setPessoaSelecionada] = useState<number>(0);
 
 
 
-
-
-    // dados do relatório individual
-
     const [relatorio, setRelatorio] = useState<RelatorioPessoaModel | null>(null);
-
 
 
 
@@ -76,7 +62,6 @@ export default function RelatorioPessoa() {
 
 
 
-    // carrega todas as pessoas para o select
 
     async function carregarPessoas() {
 
@@ -96,13 +81,7 @@ export default function RelatorioPessoa() {
 
 
 
-    // busca o relatório da pessoa selecionada
-
-    async function consultarRelatorio(
-
-        id: number
-
-    ) {
+    async function consultarRelatorio(id:number) {
 
 
         if(id === 0) {
@@ -115,8 +94,6 @@ export default function RelatorioPessoa() {
 
 
         }
-
-
 
 
 
@@ -134,23 +111,12 @@ export default function RelatorioPessoa() {
 
 
 
+
     return (
 
 
 
-        <div className="relatorio-pessoa-container">
-
-
-
-
-
-            <h2>
-
-                Relatório por pessoa
-
-            </h2>
-
-
+        <div className="relatorio-pessoa">
 
 
 
@@ -160,37 +126,25 @@ export default function RelatorioPessoa() {
             <select
 
 
-
                 value={pessoaSelecionada}
 
 
-
-                onChange={
-
-                    e => {
+                onChange={e => {
 
 
-                        const id = Number(e.target.value);
+                    const id = Number(e.target.value);
 
 
-
-                        setPessoaSelecionada(id);
-
+                    setPessoaSelecionada(id);
 
 
-                        consultarRelatorio(id);
+                    consultarRelatorio(id);
 
 
-
-                    }
-
-                }
-
+                }}
 
 
             >
-
-
 
 
 
@@ -199,7 +153,6 @@ export default function RelatorioPessoa() {
                     Selecione uma pessoa
 
                 </option>
-
 
 
 
@@ -229,8 +182,8 @@ export default function RelatorioPessoa() {
 
 
 
-
             </select>
+
 
 
 
@@ -241,12 +194,11 @@ export default function RelatorioPessoa() {
 
             {
 
-
                 relatorio && (
 
 
 
-                    <div className="card-relatorio">
+                    <div className="dados-relatorio">
 
 
 
@@ -262,10 +214,15 @@ export default function RelatorioPessoa() {
 
 
 
+                        <div className="linha-relatorio">
 
-                        <p>
 
-                            Receitas:
+                            <span>
+
+                                Receitas
+
+                            </span>
+
 
                             <strong className="receita">
 
@@ -277,9 +234,9 @@ export default function RelatorioPessoa() {
 
                                         {
 
-                                            style: "currency",
+                                            style:"currency",
 
-                                            currency: "BRL"
+                                            currency:"BRL"
 
                                         }
 
@@ -289,7 +246,9 @@ export default function RelatorioPessoa() {
 
                             </strong>
 
-                        </p>
+
+
+                        </div>
 
 
 
@@ -297,9 +256,17 @@ export default function RelatorioPessoa() {
 
 
 
-                        <p>
 
-                            Despesas:
+
+                        <div className="linha-relatorio">
+
+
+                            <span>
+
+                                Despesas
+
+                            </span>
+
 
                             <strong className="despesa">
 
@@ -311,9 +278,9 @@ export default function RelatorioPessoa() {
 
                                         {
 
-                                            style: "currency",
+                                            style:"currency",
 
-                                            currency: "BRL"
+                                            currency:"BRL"
 
                                         }
 
@@ -323,7 +290,9 @@ export default function RelatorioPessoa() {
 
                             </strong>
 
-                        </p>
+
+
+                        </div>
 
 
 
@@ -332,9 +301,16 @@ export default function RelatorioPessoa() {
 
 
 
-                        <p>
 
-                            Saldo:
+                        <div className="linha-relatorio">
+
+
+                            <span>
+
+                                Saldo
+
+                            </span>
+
 
                             <strong
 
@@ -362,9 +338,9 @@ export default function RelatorioPessoa() {
 
                                         {
 
-                                            style: "currency",
+                                            style:"currency",
 
-                                            currency: "BRL"
+                                            currency:"BRL"
 
                                         }
 
@@ -374,8 +350,9 @@ export default function RelatorioPessoa() {
 
                             </strong>
 
-                        </p>
 
+
+                        </div>
 
 
 
@@ -387,7 +364,6 @@ export default function RelatorioPessoa() {
 
 
                 )
-
 
             }
 
@@ -402,6 +378,5 @@ export default function RelatorioPessoa() {
 
 
     );
-
 
 }

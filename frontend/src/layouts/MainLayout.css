@@ -1,24 +1,13 @@
-/* estrutura principal da aplicação */
-
-.layout {
-
-    display: flex;
-
-    min-height: 100vh;
-
-    background-color: #f3f4f6;
-
-}
-
-
-/* área onde ficam as páginas */
-
 .content {
 
-    flex: 1;
-
-    padding: 30px;
 
     margin-left: 240px;
+
+
+    padding: 50px;
+
+
+    width: calc(100% - 240px);
+
 
 }

@@ -1,0 +1,122 @@
+.tabela-transacoes {
+
+
+    width:100%;
+
+
+    border-collapse:collapse;
+
+
+}
+
+
+
+
+
+.tabela-transacoes th {
+
+
+    background:#111827;
+
+
+    color:white;
+
+
+    padding:14px;
+
+
+    text-align:left;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+.tabela-transacoes td {
+
+
+    padding:14px;
+
+
+    border-bottom:1px solid #e5e7eb;
+
+
+    color:#374151;
+
+
+}
+
+
+
+
+
+
+
+.tabela-transacoes tbody tr:hover {
+
+
+    background:#f9fafb;
+
+
+}
+
+
+
+
+
+
+
+/* valor monetário */
+
+.tabela-transacoes td:nth-child(2) {
+
+
+    font-weight:500;
+
+
+}
+
+
+
+
+
+
+
+/* tipo receita */
+
+.tipo-receita {
+
+
+    color:#16a34a;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+/* tipo despesa */
+
+.tipo-despesa {
+
+
+    color:#dc2626;
+
+
+    font-weight:700;
+
+
+}

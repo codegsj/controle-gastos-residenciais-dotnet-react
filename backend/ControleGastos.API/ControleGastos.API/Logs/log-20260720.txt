@@ -234,3 +234,243 @@
 2026-07-20 12:37:18.542 -03:00 [INF] Relatório geral gerado com sucesso.
 2026-07-20 12:37:18.545 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
 2026-07-20 12:37:18.545 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:44:32.028 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:44:32.031 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:44:32.033 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:44:32.039 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:44:32.561 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:44:32.566 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:44:33.026 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:44:33.026 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:44:33.030 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:44:33.030 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:44:43.680 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:44:43.680 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:44:43.685 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:44:43.685 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:51:43.881 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:51:43.881 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:51:43.885 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:51:43.885 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:51:53.569 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:51:53.569 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:51:53.573 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:51:53.573 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:51:57.985 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:51:57.988 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:51:58.788 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:51:58.792 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:51:58.797 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:51:58.800 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:51:59.603 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:51:59.604 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:51:59.609 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:51:59.609 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:02.358 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:02.363 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:02.793 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:02.793 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:02.799 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:02.799 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:03.396 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:03.400 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:04.358 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:04.358 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:04.363 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:04.363 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:04.989 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:04.992 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:05.519 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:05.519 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:05.523 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:05.524 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:06.224 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:06.224 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:06.227 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:06.227 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:07.234 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:07.235 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:07.237 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:07.238 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:09.192 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:09.195 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:10.459 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:10.460 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:10.464 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:10.465 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:10.970 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:10.973 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:11.872 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:11.872 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:11.879 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:11.879 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:12.821 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:12.821 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:12.825 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:12.825 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:13.825 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:13.828 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:15.054 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:15.055 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:15.060 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:15.061 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:15.948 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:15.948 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:15.952 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:15.952 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:16.694 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:16.696 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:16.700 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:16.701 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:52:17.686 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:17.699 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:52:18.255 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:18.255 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:18.260 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:18.260 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:38.552 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:38.552 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:52:38.558 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:52:38.558 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:31.156 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:31.156 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:31.161 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:31.161 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:33.137 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:33.137 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:33.140 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:33.140 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:35.268 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:35.268 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:35.272 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:35.272 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:35.979 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:35.979 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:35.984 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:35.984 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:37.559 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:37.563 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:38.985 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:38.987 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:53:38.990 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:38.992 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:53:40.284 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:40.284 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:40.290 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:40.290 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:41.943 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:41.944 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:53:41.948 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:41.950 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:53:42.191 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:42.194 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:53:42.485 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:42.485 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:53:42.490 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:53:42.490 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:54:08.511 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:54:08.515 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:54:09.025 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:54:09.026 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:54:09.032 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:54:09.032 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:54:09.554 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:54:09.554 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:54:09.558 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:54:09.558 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:54:54.946 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:54:54.946 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:54:54.952 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:54:54.952 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:54:55.997 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:54:55.997 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:54:56.000 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:54:56.000 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:56:03.087 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:56:03.087 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:56:03.094 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:56:03.094 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:56:15.408 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:56:15.409 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:56:15.413 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:56:15.415 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:56:16.113 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:56:16.113 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:56:16.118 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:56:16.118 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:02:41.337 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:41.341 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:45.041 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:45.050 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:02:45.052 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:45.054 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:02:46.075 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:02:46.075 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:02:46.079 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:02:46.079 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:02:50.468 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:50.474 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:51.799 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:51.803 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:02:51.808 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:02:51.811 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:52.429 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:52.434 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:02:52.435 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:02:52.438 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:02:52.439 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:02:52.439 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:02:56.929 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 14
+2026-07-20 13:02:59.457 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 5
+2026-07-20 13:03:09.828 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 8
+2026-07-20 13:03:20.880 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 9
+2026-07-20 13:03:22.518 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 14
+2026-07-20 13:05:14.460 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:05:14.460 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:05:14.469 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:05:14.469 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:06:28.244 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:06:28.250 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:06:28.601 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:06:28.603 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:06:28.610 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:06:28.613 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:06:29.144 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:06:29.151 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:06:29.151 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:06:29.153 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:06:29.155 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:06:29.156 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:08:35.265 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:35.269 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:35.273 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:08:35.273 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:08:35.276 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:08:35.277 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:08:46.391 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 8
+2026-07-20 13:08:53.164 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:08:53.164 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:08:53.172 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:08:53.172 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:08:54.178 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:54.181 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:56.436 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:56.438 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:08:56.441 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:56.442 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 13:08:59.758 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:59.760 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:08:59.760 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:08:59.768 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:08:59.769 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:08:59.769 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:09:08.475 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:09:08.476 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:09:08.481 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:09:08.481 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:09:10.803 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:09:10.804 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:09:10.804 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 13:09:10.807 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 13:09:10.808 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 13:09:10.808 -03:00 [INF] Relatório geral gerado com sucesso.

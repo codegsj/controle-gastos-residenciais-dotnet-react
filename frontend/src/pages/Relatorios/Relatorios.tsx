@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
 
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+
+import SectionCard from "../../components/SectionCard/SectionCard";
+
+
 import ResumoFinanceiro from "../../components/ResumoFinanceiro/ResumoFinanceiro";
 
 
@@ -25,17 +31,13 @@ import "./Relatorios.css";
 
 
 
-// tela responsável pelos relatórios financeiros
+// página responsável pelos relatórios financeiros
 
 export default function Relatorios() {
 
 
 
-
-    // guarda os dados do relatório geral
-
     const [relatorios, setRelatorios] = useState<RelatorioPessoaModel[]>([]);
-
 
 
 
@@ -55,9 +57,6 @@ export default function Relatorios() {
 
 
 
-
-
-    // busca os totais de todas as pessoas
 
     async function carregarRelatorio() {
 
@@ -81,6 +80,7 @@ export default function Relatorios() {
 
 
 
+
     return (
 
 
@@ -91,44 +91,14 @@ export default function Relatorios() {
 
 
 
-
-            <h1>
-
-                Relatórios
-
-            </h1>
+            <PageHeader
 
 
+                titulo="Relatórios"
 
 
+                descricao="Consulta de receitas, despesas e saldo líquido."
 
-
-            <p>
-
-                Consulta de receitas, despesas e saldo líquido.
-
-            </p>
-
-
-
-
-
-
-
-
-
-            {/*
-
-                relatório geral
-
-                mostra todas as pessoas
-
-            */}
-
-
-            <ResumoFinanceiro
-
-                relatorios={relatorios}
 
             />
 
@@ -139,18 +109,49 @@ export default function Relatorios() {
 
 
 
+            <SectionCard
 
-            {/*
+                titulo="Resumo financeiro por pessoa"
 
-                relatório individual
-
-                consulta uma pessoa específica
-
-            */}
+            >
 
 
-            <RelatorioPessoa />
 
+                <ResumoFinanceiro
+
+
+                    relatorios={relatorios}
+
+
+                />
+
+
+
+            </SectionCard>
+
+
+
+
+
+
+
+
+
+            <SectionCard
+
+
+                titulo="Consulta individual"
+
+
+            >
+
+
+
+                <RelatorioPessoa />
+
+
+
+            </SectionCard>
 
 
 

@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 
 
-import type { Transacao } from "../../models/Transacao";
+
+import type {
+    Transacao
+} from "../../models/Transacao";
+
 
 
 import {
@@ -9,7 +13,12 @@ import {
 } from "../../services/transacaoService";
 
 
+
 import PageHeader from "../../components/PageHeader/PageHeader";
+
+
+import SectionCard from "../../components/SectionCard/SectionCard";
+
 
 
 import TransacaoForm from "./TransacaoForm";
@@ -23,13 +32,22 @@ import "./Transacoes.css";
 
 
 
+
+
+
 // página responsável pelo gerenciamento das transações
 
 export default function Transacoes() {
 
 
 
+
+    // lista de transações carregadas da API
+
     const [transacoes, setTransacoes] = useState<Transacao[]>([]);
+
+
+
 
 
 
@@ -47,7 +65,10 @@ export default function Transacoes() {
 
 
 
-    // busca as transações na api
+
+
+
+    // busca as transações na API
 
     async function carregarTransacoes() {
 
@@ -65,38 +86,94 @@ export default function Transacoes() {
 
 
 
+
+
+
+
+
     return (
+
 
 
         <div className="transacoes-container">
 
 
 
+
+
+
+
             <PageHeader
 
-                title="Transações"
 
-                description="Gerencie receitas e despesas do sistema."
+                titulo="Transações"
+
+
+                descricao="Gerencie receitas e despesas do sistema."
+
 
             />
 
 
 
 
-            <TransacaoForm
-
-                onTransacaoCriada={carregarTransacoes}
-
-            />
 
 
 
 
-            <TransacaoTable
 
-                transacoes={transacoes}
+            <SectionCard
 
-            />
+                titulo="Nova Transação"
+
+            >
+
+
+
+                <TransacaoForm
+
+
+                    onTransacaoCriada={carregarTransacoes}
+
+
+                />
+
+
+
+            </SectionCard>
+
+
+
+
+
+
+
+
+
+            <SectionCard
+
+                titulo="Transações cadastradas"
+
+            >
+
+
+
+                <TransacaoTable
+
+
+                    transacoes={transacoes}
+
+
+                />
+
+
+
+            </SectionCard>
+
+
+
+
+
 
 
 
@@ -104,5 +181,6 @@ export default function Transacoes() {
 
 
     );
+
 
 }

@@ -1,29 +1,54 @@
 import { useEffect, useState } from "react";
 
-import type { Pessoa } from "../../models/Pessoa";
+
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+import SectionCard from "../../components/SectionCard/SectionCard";
+
+
+import PessoaForm from "./PessoaForm";
+
+
+import PessoaTable from "./PessoaTable";
+
+
+import type {
+    Pessoa
+} from "../../models/Pessoa";
+
 
 import {
     listarPessoas,
     excluirPessoa
 } from "../../services/pessoaService";
 
-import PessoaTable from "./PessoaTable";
-
-import PessoaForm from "./PessoaForm";
-
-import PageHeader from "../../components/PageHeader/PageHeader";
 
 import "./Pessoas.css";
 
 
 
-// página responsável pelo gerenciamento de pessoas
+
+
+
+
+
+// página responsável pelo cadastro
+// e gerenciamento de pessoas
 
 export default function Pessoas() {
 
 
 
+
+
+    // lista de pessoas carregadas da API
+
     const [pessoas, setPessoas] = useState<Pessoa[]>([]);
+
+
+
+
+
 
 
 
@@ -37,6 +62,13 @@ export default function Pessoas() {
 
 
 
+
+
+
+
+
+
+    // busca todas as pessoas cadastradas
 
     async function carregarPessoas() {
 
@@ -52,7 +84,18 @@ export default function Pessoas() {
 
 
 
-    async function removerPessoa(id:number) {
+
+
+
+
+
+    // remove uma pessoa pelo id
+
+    async function removerPessoa(
+
+        id: number
+
+    ) {
 
 
         await excluirPessoa(id);
@@ -67,41 +110,115 @@ export default function Pessoas() {
 
 
 
+
+
+
+
+    // executado após criar uma nova pessoa
+
+    function atualizarLista() {
+
+
+        carregarPessoas();
+
+
+    }
+
+
+
+
+
+
+
+
+
     return (
+
 
 
         <div className="pessoas-container">
 
 
+
+
+
+
+
             <PageHeader
 
-                title="Pessoas"
 
-                description="Gerencie os usuários cadastrados no sistema."
+                titulo="Pessoas"
+
+
+                descricao="Cadastro e gerenciamento de pessoas."
 
 
             />
 
 
 
-            <PessoaForm
-
-                onPessoaCriada={carregarPessoas}
-
-            />
 
 
 
-            <PessoaTable
 
-                pessoas={pessoas}
 
-                onExcluir={removerPessoa}
 
-            />
+            <SectionCard
+
+                titulo="Nova Pessoa"
+
+            >
+
+
+                <PessoaForm
+
+
+                    onPessoaCriada={atualizarLista}
+
+
+                />
+
+
+            </SectionCard>
+
+
+
+
+
+
+
+
+
+            <SectionCard
+
+                titulo="Pessoas cadastradas"
+
+            >
+
+
+                <PessoaTable
+
+
+                    pessoas={pessoas}
+
+
+                    onExcluir={removerPessoa}
+
+
+                />
+
+
+            </SectionCard>
+
+
+
+
+
+
 
 
         </div>
+
 
 
     );

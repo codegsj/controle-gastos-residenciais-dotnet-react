@@ -4,15 +4,33 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
-import type { Transacao } from "../../models/Transacao";
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+
+import PessoaTable from "../Pessoas/PessoaTable";
+
+
+import TransacaoTable from "../Transacoes/TransacaoTable";
+
+
+import type {
+    Pessoa
+} from "../../models/Pessoa";
+
+
+import type {
+    Transacao
+} from "../../models/Transacao";
+
+
+import {
+    listarPessoas
+} from "../../services/pessoaService";
 
 
 import {
     listarTransacoesPorPessoa
 } from "../../services/transacaoService";
-
-
-import PageHeader from "../../components/PageHeader/PageHeader";
 
 
 import "./PessoasTransacoes.css";
@@ -22,13 +40,20 @@ import "./PessoasTransacoes.css";
 
 
 
-// página que mostra todas as transações de uma pessoa
+
+
 
 export default function PessoasTransacoes() {
 
 
 
+
     const { id } = useParams();
+
+
+
+
+    const [pessoas, setPessoas] = useState<Pessoa[]>([]);
 
 
 
@@ -39,29 +64,38 @@ export default function PessoasTransacoes() {
 
 
 
+
+
+
     useEffect(() => {
 
 
-        carregarTransacoes();
+        carregarDados();
 
 
-    }, []);
-
-
-
+    }, [id]);
 
 
 
 
-    async function carregarTransacoes() {
 
 
 
-        if (!id) return;
+
+
+    async function carregarDados() {
+
+
+        if(!id) return;
 
 
 
-        const dados = await listarTransacoesPorPessoa(
+
+        const pessoasApi = await listarPessoas();
+
+
+
+        const transacoesApi = await listarTransacoesPorPessoa(
 
             Number(id)
 
@@ -69,11 +103,18 @@ export default function PessoasTransacoes() {
 
 
 
-        setTransacoes(dados);
 
+
+        setPessoas(pessoasApi);
+
+
+
+        setTransacoes(transacoesApi);
 
 
     }
+
+
 
 
 
@@ -90,11 +131,15 @@ export default function PessoasTransacoes() {
 
 
 
+
             <PageHeader
 
-                title="Transações da Pessoa"
 
-                description="Lista de receitas e despesas cadastradas."
+                titulo="Transações da pessoa"
+
+
+                descricao="Consulta das movimentações financeiras da pessoa selecionada."
+
 
             />
 
@@ -104,142 +149,76 @@ export default function PessoasTransacoes() {
 
 
 
-            <table className="tabela-transacoes">
 
 
+            <section className="secao">
 
-                <thead>
 
+                <h2>
 
-                    <tr>
+                    Pessoas
 
+                </h2>
 
-                        <th>
-                            Descrição
-                        </th>
 
 
-                        <th>
-                            Valor
-                        </th>
 
 
-                        <th>
-                            Tipo
-                        </th>
+                <PessoaTable
 
 
-                        <th>
-                            Data
-                        </th>
+                    pessoas={pessoas.filter(
 
 
-                    </tr>
+                        pessoa => pessoa.id === Number(id)
 
 
-                </thead>
+                    )}
 
 
+                    onExcluir={() => carregarDados()}
 
 
+                />
 
-                <tbody>
 
 
+            </section>
 
-                    {
 
 
-                        transacoes.map(transacao => (
 
 
-                            <tr key={transacao.id}>
 
 
-                                <td>
 
-                                    {transacao.descricao}
 
-                                </td>
+            <section className="secao">
 
 
+                <h2>
 
-                                <td>
+                    Transações
 
-                                    {
-                                        transacao.valor.toLocaleString(
-                                            "pt-BR",
-                                            {
-                                                style: "currency",
-                                                currency: "BRL"
-                                            }
-                                        )
-                                    }
+                </h2>
 
-                                </td>
 
 
 
-                                <td>
 
 
-    <span
+                <TransacaoTable
 
-        className={
-            transacao.tipo === 1
-                ? "tipo-receita"
-                : "tipo-despesa"
-        }
 
-    >
+                    transacoes={transacoes}
 
 
-        {
+                />
 
-            transacao.tipo === 1
 
-                ? "Receita"
 
-                : "Despesa"
+            </section>
 
-        }
-
-
-    </span>
-
-
-</td>
-
-
-
-                                <td>
-
-                                    {
-                                        new Date(
-                                            transacao.data
-                                        ).toLocaleDateString(
-                                            "pt-BR"
-                                        )
-                                    }
-
-                                </td>
-
-
-
-                            </tr>
-
-
-                        ))
-
-
-                    }
-
-
-
-                </tbody>
-
-
-            </table>
 
 
 

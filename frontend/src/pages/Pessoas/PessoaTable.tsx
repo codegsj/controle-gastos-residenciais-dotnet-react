@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 
 
-import type { Pessoa } from "../../models/Pessoa";
+import type {
+    Pessoa
+} from "../../models/Pessoa";
+
+
+import "./PessoaTable.css";
+
+
 
 
 
@@ -12,12 +19,11 @@ interface Props {
     pessoas: Pessoa[];
 
 
-    // função recebida da página para excluir uma pessoa
-
-    onExcluir: (id: number) => void;
+    onExcluir: (id:number) => void;
 
 
 }
+
 
 
 
@@ -32,8 +38,10 @@ export default function PessoaTable({
 
     onExcluir
 
-
 }: Props) {
+
+
+
 
 
 
@@ -48,37 +56,25 @@ export default function PessoaTable({
             <thead>
 
 
-
                 <tr>
 
 
-
                     <th>
-
                         Nome
-
                     </th>
 
 
-
                     <th>
-
                         Idade
-
                     </th>
-
 
 
                     <th>
-
                         Ações
-
                     </th>
-
 
 
                 </tr>
-
 
 
             </thead>
@@ -96,7 +92,6 @@ export default function PessoaTable({
                 {
 
 
-
                     pessoas.map(pessoa => (
 
 
@@ -107,9 +102,7 @@ export default function PessoaTable({
 
                             <td>
 
-
                                 {pessoa.nome}
-
 
                             </td>
 
@@ -117,13 +110,9 @@ export default function PessoaTable({
 
 
 
-
-
                             <td>
 
-
                                 {pessoa.idade}
-
 
                             </td>
 
@@ -139,21 +128,15 @@ export default function PessoaTable({
 
 
 
-                                {/*
-
-                                    botão para visualizar
-
-                                    as transações da pessoa
-
-                                */}
-
-
 
                                 <Link
 
+
                                     className="botao-transacoes"
 
+
                                     to={`/pessoas/${pessoa.id}/transacoes`}
+
 
                                 >
 
@@ -169,13 +152,6 @@ export default function PessoaTable({
 
 
 
-                                {/*
-
-                                    botão para excluir pessoa
-
-                                */}
-
-
 
                                 <button
 
@@ -183,23 +159,20 @@ export default function PessoaTable({
                                     className="botao-excluir"
 
 
-
                                     onClick={() => {
 
 
 
-                                        const confirmar =
+                                        const confirmar = window.confirm(
 
-                                            window.confirm(
+                                            `Deseja excluir ${pessoa.nome}?`
 
-                                                `Deseja excluir ${pessoa.nome}?`
-
-                                            );
+                                        );
 
 
 
 
-                                        if (confirmar) {
+                                        if(confirmar) {
 
 
                                             onExcluir(pessoa.id);
@@ -212,15 +185,13 @@ export default function PessoaTable({
                                     }}
 
 
-
                                 >
-
 
                                     Excluir
 
 
-
                                 </button>
+
 
 
 
@@ -238,11 +209,7 @@ export default function PessoaTable({
 
 
 
-
-
-
                     ))
-
 
 
                 }
@@ -257,8 +224,8 @@ export default function PessoaTable({
 
 
 
-        </table>
 
+        </table>
 
 
     );

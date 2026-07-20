@@ -12,8 +12,6 @@ import "./ResumoFinanceiro.css";
 interface Props {
 
 
-    // lista contendo os dados financeiros das pessoas
-
     relatorios: RelatorioPessoa[];
 
 
@@ -25,8 +23,8 @@ interface Props {
 
 
 
-// componente responsável por exibir
-// o resumo financeiro geral das pessoas
+
+// componente responsável pelo resumo financeiro geral
 
 export default function ResumoFinanceiro({
 
@@ -39,15 +37,10 @@ export default function ResumoFinanceiro({
 
 
 
-
-
-    // soma todas as receitas
-
     const totalReceitas = relatorios.reduce(
 
 
         (total, pessoa) =>
-
 
             total + pessoa.totalReceitas,
 
@@ -63,14 +56,10 @@ export default function ResumoFinanceiro({
 
 
 
-
-    // soma todas as despesas
-
     const totalDespesas = relatorios.reduce(
 
 
         (total, pessoa) =>
-
 
             total + pessoa.totalDespesas,
 
@@ -86,14 +75,43 @@ export default function ResumoFinanceiro({
 
 
 
-
-    // calcula o saldo geral
-
     const saldoTotal =
-
 
         totalReceitas - totalDespesas;
 
+
+
+
+
+
+
+
+
+    function formatarValor(valor:number) {
+
+
+        return valor.toLocaleString(
+
+
+            "pt-BR",
+
+
+            {
+
+
+                style:"currency",
+
+
+                currency:"BRL"
+
+
+            }
+
+
+        );
+
+
+    }
 
 
 
@@ -106,21 +124,7 @@ export default function ResumoFinanceiro({
 
 
 
-        <div className="resumo-container">
-
-
-
-
-
-
-
-
-            <h2>
-
-                Resumo financeiro por pessoa
-
-            </h2>
-
+        <div className="resumo-financeiro">
 
 
 
@@ -132,53 +136,30 @@ export default function ResumoFinanceiro({
 
 
 
-
-
                 <thead>
 
 
                     <tr>
 
 
-
                         <th>
-
                             Pessoa
-
                         </th>
 
 
-
-
-
                         <th>
-
                             Receitas
-
                         </th>
 
 
-
-
-
                         <th>
-
                             Despesas
-
                         </th>
-
-
-
 
 
                         <th>
-
                             Saldo
-
                         </th>
-
-
-
 
 
                     </tr>
@@ -192,11 +173,7 @@ export default function ResumoFinanceiro({
 
 
 
-
                 <tbody>
-
-
-
 
 
                     {
@@ -206,15 +183,7 @@ export default function ResumoFinanceiro({
 
 
 
-
-                            <tr
-
-                                key={pessoa.pessoaId}
-
-                            >
-
-
-
+                            <tr key={pessoa.pessoaId}>
 
 
                                 <td>
@@ -226,66 +195,24 @@ export default function ResumoFinanceiro({
 
 
 
-
-
-
                                 <td className="receita">
 
-
-                                    {
-
-                                        pessoa.totalReceitas.toLocaleString(
-
-                                            "pt-BR",
-
-                                            {
-
-                                                style: "currency",
-
-                                                currency: "BRL"
-
-                                            }
-
-                                        )
-
-                                    }
-
+                                    {formatarValor(
+                                        pessoa.totalReceitas
+                                    )}
 
                                 </td>
-
-
-
-
 
 
 
 
                                 <td className="despesa">
 
-
-                                    {
-
-                                        pessoa.totalDespesas.toLocaleString(
-
-                                            "pt-BR",
-
-                                            {
-
-                                                style: "currency",
-
-                                                currency: "BRL"
-
-                                            }
-
-                                        )
-
-                                    }
-
+                                    {formatarValor(
+                                        pessoa.totalDespesas
+                                    )}
 
                                 </td>
-
-
-
 
 
 
@@ -309,29 +236,11 @@ export default function ResumoFinanceiro({
 
                                 >
 
-
-                                    {
-
-                                        pessoa.saldo.toLocaleString(
-
-                                            "pt-BR",
-
-                                            {
-
-                                                style: "currency",
-
-                                                currency: "BRL"
-
-                                            }
-
-                                        )
-
-                                    }
-
+                                    {formatarValor(
+                                        pessoa.saldo
+                                    )}
 
                                 </td>
-
-
 
 
 
@@ -343,18 +252,10 @@ export default function ResumoFinanceiro({
                         ))
 
 
-
                     }
 
 
-
-
-
-
-
                 </tbody>
-
-
 
 
 
@@ -369,30 +270,15 @@ export default function ResumoFinanceiro({
 
 
 
-            {/*
-
-                fechamento do relatório
-
-                conforme solicitado no teste
-
-            */}
-
-
-
-
-
             <div className="total-geral">
 
 
 
-
-
-
-                <h2>
+                <h3>
 
                     Total geral
 
-                </h2>
+                </h3>
 
 
 
@@ -400,41 +286,22 @@ export default function ResumoFinanceiro({
 
 
 
-
-                <div>
+                <div className="linha-total">
 
 
                     <span>
 
-                        Total de receitas:
+                        Receitas
 
                     </span>
+
 
 
                     <strong className="receita">
 
-
-                        {
-
-                            totalReceitas.toLocaleString(
-
-                                "pt-BR",
-
-                                {
-
-                                    style: "currency",
-
-                                    currency: "BRL"
-
-                                }
-
-                            )
-
-                        }
-
+                        {formatarValor(totalReceitas)}
 
                     </strong>
-
 
 
                 </div>
@@ -446,41 +313,22 @@ export default function ResumoFinanceiro({
 
 
 
-
-                <div>
+                <div className="linha-total">
 
 
                     <span>
 
-                        Total de despesas:
+                        Despesas
 
                     </span>
+
 
 
                     <strong className="despesa">
 
-
-                        {
-
-                            totalDespesas.toLocaleString(
-
-                                "pt-BR",
-
-                                {
-
-                                    style: "currency",
-
-                                    currency: "BRL"
-
-                                }
-
-                            )
-
-                        }
-
+                        {formatarValor(totalDespesas)}
 
                     </strong>
-
 
 
                 </div>
@@ -492,15 +340,15 @@ export default function ResumoFinanceiro({
 
 
 
-
-                <div>
+                <div className="linha-total">
 
 
                     <span>
 
-                        Saldo líquido:
+                        Saldo líquido
 
                     </span>
+
 
 
                     <strong
@@ -521,28 +369,9 @@ export default function ResumoFinanceiro({
 
                     >
 
-
-                        {
-
-                            saldoTotal.toLocaleString(
-
-                                "pt-BR",
-
-                                {
-
-                                    style: "currency",
-
-                                    currency: "BRL"
-
-                                }
-
-                            )
-
-                        }
-
+                        {formatarValor(saldoTotal)}
 
                     </strong>
-
 
 
                 </div>
@@ -562,7 +391,6 @@ export default function ResumoFinanceiro({
 
 
         </div>
-
 
 
     );

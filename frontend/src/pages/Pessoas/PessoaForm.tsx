@@ -1,21 +1,36 @@
 import { useState } from "react";
 
-import type { CreatePessoa } from "../../models/CreatePessoa";
 
-import { criarPessoa } from "../../services/pessoaService";
+import type {
+    CreatePessoa
+} from "../../models/CreatePessoa";
+
+
+import {
+    criarPessoa
+} from "../../services/pessoaService";
+
+
+
+import "./PessoaForm.css";
+
+
 
 
 
 interface Props {
 
 
-    // função enviada pela página de pessoas
-    // responsável por atualizar a tabela depois do cadastro
+    // função executada após criar uma pessoa
 
     onPessoaCriada: () => void;
 
 
 }
+
+
+
+
 
 
 
@@ -29,7 +44,10 @@ export default function PessoaForm({
 
 
 
+
+
     const [nome, setNome] = useState("");
+
 
     const [idade, setIdade] = useState("");
 
@@ -37,7 +55,9 @@ export default function PessoaForm({
 
 
 
-    // envia uma nova pessoa para a api
+
+
+
 
     async function salvarPessoa() {
 
@@ -45,10 +65,11 @@ export default function PessoaForm({
         try {
 
 
+
             const novaPessoa: CreatePessoa = {
 
 
-                nome: nome,
+                nome,
 
 
                 idade: Number(idade)
@@ -58,21 +79,28 @@ export default function PessoaForm({
 
 
 
+
+
             await criarPessoa(novaPessoa);
 
 
 
-            // limpa os campos após salvar
+
+
 
             setNome("");
+
 
             setIdade("");
 
 
 
-            // atualiza a lista da tela
+
 
             onPessoaCriada();
+
+
+
 
 
 
@@ -80,8 +108,11 @@ export default function PessoaForm({
 
 
             console.error(
-                "erro ao cadastrar pessoa:",
+
+                "Erro ao cadastrar pessoa:",
+
                 erro
+
             );
 
 
@@ -93,61 +124,98 @@ export default function PessoaForm({
 
 
 
+
+
+
+
+
     return (
 
-    <div className="form-pessoa">
 
 
-            <h2>
-                Nova Pessoa
-            </h2>
+        <div className="form-pessoa">
+
+
+
 
 
 
             <input
+
 
                 placeholder="Nome"
 
+
                 value={nome}
 
+
                 onChange={
+
                     e => setNome(e.target.value)
+
                 }
 
+
             />
+
+
+
+
 
 
 
             <input
 
+
                 placeholder="Idade"
+
 
                 type="number"
 
+
                 value={idade}
 
+
                 onChange={
+
                     e => setIdade(e.target.value)
+
                 }
 
+
             />
+
+
+
+
+
 
 
 
             <button
 
+
                 onClick={salvarPessoa}
+
 
             >
 
+
                 Salvar
+
 
 
             </button>
 
 
 
+
+
+
+
+
         </div>
+
 
 
     );

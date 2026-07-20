@@ -1,34 +1,11 @@
-v.resumo-container {
+.resumo-financeiro {
 
 
-    margin-top: 30px;
-
-
-    background: white;
-
-
-    padding: 25px;
-
-
-    border-radius: 10px;
-
-
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width:100%;
 
 
 }
 
-
-
-
-
-.resumo-container h2 {
-
-
-    margin-bottom: 20px;
-
-
-}
 
 
 
@@ -38,13 +15,15 @@ v.resumo-container {
 .tabela-resumo {
 
 
-    width: 100%;
+    width:100%;
 
 
-    border-collapse: collapse;
+    border-collapse:collapse;
 
 
 }
+
+
 
 
 
@@ -54,19 +33,21 @@ v.resumo-container {
 .tabela-resumo th {
 
 
-    background-color: #111827;
+    background:#111827;
 
 
-    color: white;
+    color:white;
 
 
-    padding: 14px;
+    padding:14px;
 
 
-    text-align: left;
+    text-align:left;
 
 
 }
+
+
 
 
 
@@ -76,13 +57,30 @@ v.resumo-container {
 .tabela-resumo td {
 
 
-    padding: 14px;
+    padding:14px;
 
 
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom:1px solid #e5e7eb;
 
 
 }
+
+
+
+
+
+
+
+
+.tabela-resumo tbody tr:hover {
+
+
+    background:#f9fafb;
+
+
+}
+
+
 
 
 
@@ -92,13 +90,15 @@ v.resumo-container {
 .receita {
 
 
-    color: #16a34a;
+    color:#16a34a;
 
 
-    font-weight: bold;
+    font-weight:700;
 
 
 }
+
+
 
 
 
@@ -108,13 +108,15 @@ v.resumo-container {
 .despesa {
 
 
-    color: #dc2626;
+    color:#dc2626;
 
 
-    font-weight: bold;
+    font-weight:700;
 
 
 }
+
+
 
 
 
@@ -124,13 +126,15 @@ v.resumo-container {
 .saldo-positivo {
 
 
-    color: #2563eb;
+    color:#2563eb;
 
 
-    font-weight: bold;
+    font-weight:700;
 
 
 }
+
+
 
 
 
@@ -140,37 +144,35 @@ v.resumo-container {
 .saldo-negativo {
 
 
-    color: #dc2626;
+    color:#dc2626;
 
 
-    font-weight: bold;
+    font-weight:700;
 
 
 }
+
+
+
+
+
+
+
+
 
 .total-geral {
 
 
-    margin-top: 30px;
+    margin-top:35px;
 
 
-    padding: 20px;
+    padding-top:25px;
 
 
-    background-color: #f3f4f6;
+    border-top:1px solid #e5e7eb;
 
 
-    border-radius: 10px;
-
-
-}
-
-
-
-.total-geral h2 {
-
-
-    margin-bottom: 20px;
+    width:420px;
 
 
 }
@@ -178,19 +180,20 @@ v.resumo-container {
 
 
 
-.total-geral div {
 
 
-    display: flex;
 
 
-    justify-content: space-between;
+.total-geral h3 {
 
 
-    max-width: 400px;
+    margin:0 0 20px 0;
 
 
-    margin-bottom: 10px;
+    font-size:22px;
+
+
+    color:#111827;
 
 
 }
@@ -198,10 +201,41 @@ v.resumo-container {
 
 
 
-.total-geral strong {
 
 
-    font-size: 16px;
+
+
+.linha-total {
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:14px;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+
+
+
+.linha-total strong {
+
+
+    font-size:16px;
 
 
 }

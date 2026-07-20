@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 
 
-import type { Pessoa } from "../../models/Pessoa";
+import type {
+    Pessoa
+} from "../../models/Pessoa";
 
 
-import type { CreateTransacao } from "../../models/CreateTransacao";
+import type {
+    CreateTransacao
+} from "../../models/CreateTransacao";
 
 
 import {
@@ -27,13 +31,14 @@ import {
 } from "../../services/transacaoService";
 
 
+import "./TransacaoForm.css";
+
+
 
 
 
 interface Props {
 
-
-    // função executada após cadastrar uma transação
 
     onTransacaoCriada: () => void;
 
@@ -44,9 +49,6 @@ interface Props {
 
 
 
-
-// formulário responsável pelo cadastro de transações
-
 export default function TransacaoForm({
 
     onTransacaoCriada
@@ -56,25 +58,15 @@ export default function TransacaoForm({
 
 
 
-    // lista de pessoas carregadas da api
-
     const [pessoas, setPessoas] = useState<Pessoa[]>([]);
 
 
-
-
-    // campos do formulário
-
     const [descricao, setDescricao] = useState("");
+
 
     const [valor, setValor] = useState("");
 
 
-
-
-    // controla o tipo da transação
-    // 1 = receita
-    // 2 = despesa
 
     const [tipo, setTipo] = useState<TipoTransacaoType>(
 
@@ -84,12 +76,7 @@ export default function TransacaoForm({
 
 
 
-
-    // pessoa selecionada
-
     const [pessoaId, setPessoaId] = useState<number>(0);
-
-
 
 
 
@@ -109,10 +96,6 @@ export default function TransacaoForm({
 
 
 
-
-
-    // busca pessoas para preencher o select
-
     async function carregarPessoas() {
 
 
@@ -130,10 +113,8 @@ export default function TransacaoForm({
 
 
 
-
-    // salva uma nova transação
-
     async function salvarTransacao() {
+
 
 
         const novaTransacao: CreateTransacao = {
@@ -142,13 +123,13 @@ export default function TransacaoForm({
             descricao,
 
 
-            valor: Number(valor),
+            valor:Number(valor),
 
 
             tipo,
 
 
-            data: new Date().toISOString(),
+            data:new Date().toISOString(),
 
 
             pessoaId
@@ -162,6 +143,7 @@ export default function TransacaoForm({
         try {
 
 
+
             await criarTransacao(novaTransacao);
 
 
@@ -171,8 +153,6 @@ export default function TransacaoForm({
             );
 
 
-
-            // limpa o formulário
 
             setDescricao("");
 
@@ -186,15 +166,12 @@ export default function TransacaoForm({
 
 
 
-            // atualiza a tabela
-
             onTransacaoCriada();
 
 
 
         }
-
-        catch(error: any) {
+        catch(error:any) {
 
 
 
@@ -208,22 +185,15 @@ export default function TransacaoForm({
 
 
 
-
-            const mensagem =
+            alert(
 
                 error.response?.data?.message
 
                 ??
 
-                "Erro ao salvar transação.";
+                "Erro ao salvar transação."
 
-
-
-
-
-            alert(mensagem);
-
-
+            );
 
         }
 
@@ -237,44 +207,24 @@ export default function TransacaoForm({
 
 
 
-
     return (
-
 
 
         <div className="form-transacao">
 
 
 
-            <h2>
-                Nova Transação
-            </h2>
-
-
-
-
-
-
             <input
-
 
                 placeholder="Descrição"
 
-
                 value={descricao}
 
-
                 onChange={
-
                     e => setDescricao(e.target.value)
-
                 }
 
-
             />
-
-
-
 
 
 
@@ -282,26 +232,17 @@ export default function TransacaoForm({
 
             <input
 
-
                 placeholder="Valor"
-
 
                 type="number"
 
-
                 value={valor}
 
-
                 onChange={
-
                     e => setValor(e.target.value)
-
                 }
 
-
             />
-
-
 
 
 
@@ -311,11 +252,7 @@ export default function TransacaoForm({
 
             <select
 
-
-
                 value={tipo}
-
-
 
                 onChange={
 
@@ -329,36 +266,20 @@ export default function TransacaoForm({
 
                 }
 
-
-
             >
 
 
-
-
                 <option value={TipoTransacao.Receita}>
-
                     Receita
-
                 </option>
-
-
-
 
 
                 <option value={TipoTransacao.Despesa}>
-
                     Despesa
-
                 </option>
 
 
-
-
-
             </select>
-
-
 
 
 
@@ -368,77 +289,42 @@ export default function TransacaoForm({
 
             <select
 
-
-
                 value={pessoaId}
 
-
-
                 onChange={
-
                     e => setPessoaId(Number(e.target.value))
-
                 }
-
-
 
             >
 
 
-
-
-
                 <option value={0}>
-
                     Selecione a pessoa
-
                 </option>
 
 
 
-
-
-
-
-
                 {
-
 
                     pessoas.map(pessoa => (
 
 
                         <option
 
-
-
                             key={pessoa.id}
-
-
 
                             value={pessoa.id}
 
-
-
                         >
 
-
-
                             {pessoa.nome}
-
-
 
                         </option>
 
 
-
                     ))
 
-
-
                 }
-
-
-
 
 
             </select>
@@ -449,32 +335,20 @@ export default function TransacaoForm({
 
 
 
-
-
             <button
-
-
 
                 onClick={salvarTransacao}
 
-
-
             >
 
-
                 Salvar
-
-
 
             </button>
 
 
 
 
-
-
         </div>
-
 
 
     );

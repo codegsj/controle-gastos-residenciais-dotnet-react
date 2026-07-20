@@ -1,4 +1,5 @@
 import type { Transacao } from "../../models/Transacao";
+import "./TransacaoTable.css";
 
 
 

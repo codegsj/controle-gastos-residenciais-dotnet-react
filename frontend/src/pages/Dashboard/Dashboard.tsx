@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 
 
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+import PageContainer from "../../components/PageContainer/PageContainer";
+
 import Card from "../../components/Card/Card";
+
+
+import {
+    listarPessoas
+} from "../../services/pessoaService";
 
 
 import {
     buscarTotais
 } from "../../services/relatorioService";
-
-
-import type {
-    RelatorioPessoa
-} from "../../models/Relatorio";
 
 
 import "./Dashboard.css";
@@ -21,18 +25,25 @@ import "./Dashboard.css";
 
 
 
-// tela inicial da aplicação
-// apresenta uma visão geral dos dados financeiros
+
 
 export default function Dashboard() {
 
 
 
 
+    const [quantidadePessoas, setQuantidadePessoas] = useState(0);
 
-    // guarda os dados vindos do relatório
 
-    const [relatorios, setRelatorios] = useState<RelatorioPessoa[]>([]);
+    const [totalReceitas, setTotalReceitas] = useState(0);
+
+
+    const [totalDespesas, setTotalDespesas] = useState(0);
+
+
+    const [saldo, setSaldo] = useState(0);
+
+
 
 
 
@@ -43,7 +54,7 @@ export default function Dashboard() {
     useEffect(() => {
 
 
-        carregarDados();
+        carregarDashboard();
 
 
     }, []);
@@ -54,17 +65,129 @@ export default function Dashboard() {
 
 
 
-    // busca informações gerais no backend
-
-    async function carregarDados() {
 
 
-        const dados = await buscarTotais();
+    async function carregarDashboard() {
 
 
-        setRelatorios(
+        try {
 
-            dados.pessoas
+
+            const pessoas = await listarPessoas();
+
+
+            setQuantidadePessoas(
+
+                pessoas.length
+
+            );
+
+
+
+
+
+
+
+            const relatorio = await buscarTotais();
+
+
+
+
+            const receitas = relatorio.pessoas.reduce(
+
+
+                (total, pessoa) =>
+
+                    total + pessoa.totalReceitas,
+
+
+                0
+
+
+            );
+
+
+
+
+
+
+
+            const despesas = relatorio.pessoas.reduce(
+
+
+                (total, pessoa) =>
+
+                    total + pessoa.totalDespesas,
+
+
+                0
+
+
+            );
+
+
+
+
+
+
+
+            setTotalReceitas(receitas);
+
+
+            setTotalDespesas(despesas);
+
+
+            setSaldo(
+
+                receitas - despesas
+
+            );
+
+
+
+
+
+        }
+
+        catch(error) {
+
+
+            console.error(
+
+                "Erro ao carregar dashboard:",
+
+                error
+
+            );
+
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+    function formatarValor(valor:number) {
+
+
+        return valor.toLocaleString(
+
+            "pt-BR",
+
+            {
+
+                style:"currency",
+
+                currency:"BRL"
+
+            }
 
         );
 
@@ -77,99 +200,27 @@ export default function Dashboard() {
 
 
 
-    // quantidade de pessoas cadastradas
-
-    const quantidadePessoas = relatorios.length;
-
-
-
-
-
-
-
-    // soma das receitas
-
-    const totalReceitas = relatorios.reduce(
-
-
-        (total, pessoa) =>
-
-
-            total + pessoa.totalReceitas,
-
-
-        0
-
-
-    );
-
-
-
-
-
-
-
-    // soma das despesas
-
-    const totalDespesas = relatorios.reduce(
-
-
-        (total, pessoa) =>
-
-
-            total + pessoa.totalDespesas,
-
-
-        0
-
-
-    );
-
-
-
-
-
-
-
-    // saldo geral
-
-    const saldoTotal =
-
-
-        totalReceitas - totalDespesas;
-
-
-
-
-
-
 
 
     return (
 
 
 
-        <div>
+        <PageContainer>
 
 
 
+            <PageHeader
 
 
-            <h1>
-
-                Dashboard
-
-            </h1>
+                titulo="Dashboard"
 
 
+                descricao="Visão geral dos gastos residenciais."
 
 
+            />
 
-            <p>
-
-                Visão geral dos gastos residenciais.
-
-            </p>
 
 
 
@@ -185,10 +236,13 @@ export default function Dashboard() {
 
                 <Card
 
+
                     titulo="Pessoas"
+
 
                     valor={`${quantidadePessoas} cadastradas`}
 
+
                 />
 
 
@@ -197,27 +251,15 @@ export default function Dashboard() {
 
 
 
+
                 <Card
+
 
                     titulo="Receitas"
 
-                    valor={
 
-                        totalReceitas.toLocaleString(
+                    valor={formatarValor(totalReceitas)}
 
-                            "pt-BR",
-
-                            {
-
-                                style: "currency",
-
-                                currency: "BRL"
-
-                            }
-
-                        )
-
-                    }
 
                 />
 
@@ -229,26 +271,13 @@ export default function Dashboard() {
 
 
                 <Card
+
 
                     titulo="Despesas"
 
-                    valor={
 
-                        totalDespesas.toLocaleString(
+                    valor={formatarValor(totalDespesas)}
 
-                            "pt-BR",
-
-                            {
-
-                                style: "currency",
-
-                                currency: "BRL"
-
-                            }
-
-                        )
-
-                    }
 
                 />
 
@@ -261,28 +290,14 @@ export default function Dashboard() {
 
                 <Card
 
+
                     titulo="Saldo"
 
-                    valor={
 
-                        saldoTotal.toLocaleString(
+                    valor={formatarValor(saldo)}
 
-                            "pt-BR",
-
-                            {
-
-                                style: "currency",
-
-                                currency: "BRL"
-
-                            }
-
-                        )
-
-                    }
 
                 />
-
 
 
 
@@ -296,12 +311,10 @@ export default function Dashboard() {
 
 
 
-
-        </div>
+        </PageContainer>
 
 
 
     );
-
 
 }

@@ -5,28 +5,28 @@ import "./PageHeader.css";
 interface Props {
 
 
-    // título principal da página
-
-    title: string;
+    titulo: string;
 
 
-
-    // descrição abaixo do título
-
-    description: string;
+    descricao: string;
 
 
 }
 
 
 
-// componente responsável pelo cabeçalho das páginas
+
+
+// componente padrão utilizado
+// no topo das páginas
 
 export default function PageHeader({
 
-    title,
 
-    description
+    titulo,
+
+
+    descricao
 
 
 }: Props) {
@@ -36,26 +36,33 @@ export default function PageHeader({
     return (
 
 
-        <div className="page-header">
+
+        <header className="page-header">
+
 
 
             <h1>
 
-                {title}
+                {titulo}
 
             </h1>
 
 
 
+
+
             <p>
 
-                {description}
+                {descricao}
 
             </p>
 
 
 
-        </div>
+
+
+        </header>
+
 
 
     );

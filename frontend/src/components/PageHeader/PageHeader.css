@@ -1,42 +1,53 @@
 .page-header {
 
 
-    margin-bottom: 30px;
-
-
-    padding-bottom: 20px;
-
-
-    border-bottom: 1px solid #e5e7eb;
+    margin-bottom:25px;
 
 
 }
+
+
+
+
 
 
 
 .page-header h1 {
 
 
-    font-size: 32px;
+    margin:0;
 
 
-    color: #111827;
+    font-size:30px;
 
 
-    margin-bottom: 8px;
+    font-weight:700;
+
+
+    color:#111827;
 
 
 }
 
 
 
+
+
+
+
 .page-header p {
 
 
-    color: #6b7280;
+    margin:8px 0 0;
 
 
-    font-size: 16px;
+    color:#6b7280;
+
+
+    font-size:15px;
+
+
+    line-height:1.5;
 
 
 }
