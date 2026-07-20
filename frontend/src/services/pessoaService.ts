@@ -3,17 +3,15 @@ import api from "./api";
 import type { Pessoa } from "../models/Pessoa";
 
 
-export async function listarPessoas(){
+// busca todas as pessoas cadastradas na api
 
-    console.log("chamando api de pessoas");
+export async function listarPessoas() {
 
 
     const resposta = await api.get<Pessoa[]>("/pessoas");
 
 
-    console.log("retorno da api:", resposta.data);
-
-
     return resposta.data;
+
 
 }

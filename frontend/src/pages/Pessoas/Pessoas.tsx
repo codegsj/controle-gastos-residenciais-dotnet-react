@@ -44,21 +44,26 @@ export default function Pessoas(){
 
     return (
 
-        <div className="pessoas-container">
+    <div className="pessoas-container">
 
-            <h1>
-                Pessoas
-            </h1>
 
-            <p>
-                Cadastro e gerenciamento de pessoas.
-            </p>
+        <h1>
+            Pessoas
+        </h1>
 
-            <PessoaTable 
-                pessoas={pessoas}
-            />
 
-        </div>
+        <p>
+            Cadastro e gerenciamento de pessoas.
+        </p>
 
-    );
+
+        <PessoaTable 
+            pessoas={pessoas}
+        />
+
+
+    </div>
+
+);
+
 }
