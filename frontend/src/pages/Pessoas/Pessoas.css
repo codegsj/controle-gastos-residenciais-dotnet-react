@@ -189,20 +189,40 @@
 }
 
 
+/* botão de exclusão */
 
-.tabela-pessoas button {
+.botao-excluir {
 
 
-    cursor: pointer;
+    background-color: #dc2626;
+
+
+    color: white;
 
 
     border: none;
 
 
-    background: transparent;
+    padding: 8px 14px;
 
 
-    font-size: 18px;
+    border-radius: 6px;
+
+
+    cursor: pointer;
+
+
+    font-size: 14px;
+
+
+}
+
+
+
+.botao-excluir:hover {
+
+
+    background-color: #b91c1c;
 
 
 }

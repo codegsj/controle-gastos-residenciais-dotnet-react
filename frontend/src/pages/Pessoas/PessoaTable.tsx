@@ -1,14 +1,13 @@
 import type { Pessoa } from "../../models/Pessoa";
 
 
-
 interface Props {
 
 
     pessoas: Pessoa[];
 
 
-    // função responsável por excluir uma pessoa
+    // função recebida da página para excluir uma pessoa
 
     onExcluir: (id: number) => void;
 
@@ -17,7 +16,7 @@ interface Props {
 
 
 
-// componente responsável pela tabela de pessoas
+// tabela responsável por exibir as pessoas cadastradas
 
 export default function PessoaTable({
 
@@ -64,7 +63,6 @@ export default function PessoaTable({
 
 
 
-
             <tbody>
 
 
@@ -83,6 +81,7 @@ export default function PessoaTable({
                             </td>
 
 
+
                             <td>
 
                                 {pessoa.idade}
@@ -90,18 +89,35 @@ export default function PessoaTable({
                             </td>
 
 
+
                             <td>
 
 
                                 <button
 
-                                    onClick={() =>
-                                        onExcluir(pessoa.id)
-                                    }
+                                    className="botao-excluir"
+
+                                    onClick={() => {
+
+
+                                        const confirmar =
+                                            window.confirm(
+                                                `Deseja excluir ${pessoa.nome}?`
+                                            );
+
+
+                                        if (confirmar) {
+
+                                            onExcluir(pessoa.id);
+
+                                        }
+
+
+                                    }}
 
                                 >
 
-                                    🗑
+                                    Excluir
 
 
                                 </button>
