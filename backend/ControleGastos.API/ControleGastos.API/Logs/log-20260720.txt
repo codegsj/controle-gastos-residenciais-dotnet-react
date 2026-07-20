@@ -189,3 +189,34 @@
 2026-07-20 12:24:26.315 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
 2026-07-20 12:24:26.319 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
 2026-07-20 12:24:26.321 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:27:56.445 -03:00 [INF] Consulta de transações por pessoa realizada com sucesso. PessoaId: 8, Quantidade encontrada: 7
+2026-07-20 12:27:56.455 -03:00 [INF] Consulta de transações por pessoa realizada com sucesso. PessoaId: 8, Quantidade encontrada: 7
+2026-07-20 12:27:59.070 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:27:59.074 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:27:59.801 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:27:59.804 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:27:59.805 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:27:59.811 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:02.526 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:02.527 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:02.532 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:02.533 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:02.851 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:02.855 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:03.281 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:03.282 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:03.286 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:03.286 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:05.104 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:05.108 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:05.823 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:05.823 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:05.828 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:05.828 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:07.026 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:07.027 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:28:07.031 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 12:28:07.032 -03:00 [INF] Consulta de transações realizada com sucesso. Quantidade encontrada: 19
+2026-07-20 12:31:08.962 -03:00 [INF] Geração de relatório geral iniciada. Quantidade de pessoas encontradas: 5
+2026-07-20 12:31:08.965 -03:00 [INF] Relatório geral gerado com sucesso.
+2026-07-20 12:31:34.192 -03:00 [INF] Relatório individual gerado com sucesso. PessoaId: 9
