@@ -1,17 +1,33 @@
 import type { Pessoa } from "../../models/Pessoa";
 
 
+
 interface Props {
 
+
     pessoas: Pessoa[];
+
+
+    // função responsável por excluir uma pessoa
+
+    onExcluir: (id: number) => void;
+
 
 }
 
 
-// componente responsável por mostrar
-// a lista de pessoas em formato de tabela
 
-export default function PessoaTable({ pessoas }: Props) {
+// componente responsável pela tabela de pessoas
+
+export default function PessoaTable({
+
+    pessoas,
+
+    onExcluir
+
+
+}: Props) {
+
 
 
     return (
@@ -21,6 +37,7 @@ export default function PessoaTable({ pessoas }: Props) {
 
 
             <thead>
+
 
                 <tr>
 
@@ -42,7 +59,9 @@ export default function PessoaTable({ pessoas }: Props) {
 
                 </tr>
 
+
             </thead>
+
 
 
 
@@ -50,6 +69,7 @@ export default function PessoaTable({ pessoas }: Props) {
 
 
                 {
+
                     pessoas.map(pessoa => (
 
 
@@ -57,22 +77,35 @@ export default function PessoaTable({ pessoas }: Props) {
 
 
                             <td>
+
                                 {pessoa.nome}
+
                             </td>
 
 
                             <td>
+
                                 {pessoa.idade}
+
                             </td>
 
 
                             <td>
 
-                                <button>
+
+                                <button
+
+                                    onClick={() =>
+                                        onExcluir(pessoa.id)
+                                    }
+
+                                >
 
                                     🗑
 
+
                                 </button>
+
 
                             </td>
 
@@ -81,6 +114,7 @@ export default function PessoaTable({ pessoas }: Props) {
 
 
                     ))
+
                 }
 
 
@@ -91,5 +125,6 @@ export default function PessoaTable({ pessoas }: Props) {
 
 
     );
+
 
 }

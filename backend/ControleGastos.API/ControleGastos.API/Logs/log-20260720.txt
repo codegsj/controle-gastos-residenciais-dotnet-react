@@ -23,3 +23,27 @@
 2026-07-20 10:18:43.429 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
 2026-07-20 10:28:49.537 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
 2026-07-20 10:28:49.541 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:39:14.138 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:39:14.144 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:40:23.335 -03:00 [INF] Pessoa criada com sucesso. Id: 12, Nome: Testegu, Idade: 37
+2026-07-20 10:40:23.359 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:40.515 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:40.532 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:41.376 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:41.381 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:42.174 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:42.179 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:42.861 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:42.869 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:44.330 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:44.335 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:44.990 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:44.994 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:45.584 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:45.590 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 6
+2026-07-20 10:40:55.927 -03:00 [INF] Pessoa criada com sucesso. Id: 13, Nome: Paulo, Idade: 35
+2026-07-20 10:40:55.933 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 7
+2026-07-20 10:40:59.820 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 7
+2026-07-20 10:40:59.824 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 7
+2026-07-20 10:41:00.591 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 7
+2026-07-20 10:41:00.597 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 7

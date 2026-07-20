@@ -21,6 +21,7 @@ export async function listarPessoas() {
 
 
 
+
 // cadastra uma nova pessoa
 
 export async function criarPessoa(
@@ -35,6 +36,23 @@ export async function criarPessoa(
 
 
     return resposta.data;
+
+
+}
+
+
+
+
+// exclui uma pessoa pelo id
+
+export async function excluirPessoa(
+    id: number
+) {
+
+
+    await api.delete(
+        `/pessoas/${id}`
+    );
 
 
 }
