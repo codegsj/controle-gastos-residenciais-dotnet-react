@@ -22,14 +22,19 @@ import "./Dashboard.css";
 
 
 // tela inicial da aplicação
+// apresenta uma visão geral dos dados financeiros
 
 export default function Dashboard() {
 
 
 
-    // guarda os dados financeiros das pessoas
+
+
+    // guarda os dados vindos do relatório
 
     const [relatorios, setRelatorios] = useState<RelatorioPessoa[]>([]);
+
+
 
 
 
@@ -49,8 +54,7 @@ export default function Dashboard() {
 
 
 
-
-    // busca os dados do relatório no backend
+    // busca informações gerais no backend
 
     async function carregarDados() {
 
@@ -58,7 +62,11 @@ export default function Dashboard() {
         const dados = await buscarTotais();
 
 
-        setRelatorios(dados.pessoas);
+        setRelatorios(
+
+            dados.pessoas
+
+        );
 
 
     }
@@ -69,15 +77,29 @@ export default function Dashboard() {
 
 
 
-    // soma todas as receitas
+    // quantidade de pessoas cadastradas
+
+    const quantidadePessoas = relatorios.length;
+
+
+
+
+
+
+
+    // soma das receitas
 
     const totalReceitas = relatorios.reduce(
 
+
         (total, pessoa) =>
+
 
             total + pessoa.totalReceitas,
 
+
         0
+
 
     );
 
@@ -87,15 +109,19 @@ export default function Dashboard() {
 
 
 
-    // soma todas as despesas
+    // soma das despesas
 
     const totalDespesas = relatorios.reduce(
 
+
         (total, pessoa) =>
+
 
             total + pessoa.totalDespesas,
 
+
         0
+
 
     );
 
@@ -105,9 +131,10 @@ export default function Dashboard() {
 
 
 
-    // calcula o saldo geral
+    // saldo geral
 
     const saldoTotal =
+
 
         totalReceitas - totalDespesas;
 
@@ -150,7 +177,6 @@ export default function Dashboard() {
 
 
 
-
             <div className="cards-container">
 
 
@@ -161,9 +187,10 @@ export default function Dashboard() {
 
                     titulo="Pessoas"
 
-                    valor={`${relatorios.length} cadastradas`}
+                    valor={`${quantidadePessoas} cadastradas`}
 
                 />
+
 
 
 
@@ -200,6 +227,7 @@ export default function Dashboard() {
 
 
 
+
                 <Card
 
                     titulo="Despesas"
@@ -223,6 +251,7 @@ export default function Dashboard() {
                     }
 
                 />
+
 
 
 
@@ -261,6 +290,8 @@ export default function Dashboard() {
 
 
             </div>
+
+
 
 
 

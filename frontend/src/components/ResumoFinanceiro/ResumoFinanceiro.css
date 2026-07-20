@@ -1,0 +1,207 @@
+v.resumo-container {
+
+
+    margin-top: 30px;
+
+
+    background: white;
+
+
+    padding: 25px;
+
+
+    border-radius: 10px;
+
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+
+.resumo-container h2 {
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+
+
+.tabela-resumo {
+
+
+    width: 100%;
+
+
+    border-collapse: collapse;
+
+
+}
+
+
+
+
+
+
+.tabela-resumo th {
+
+
+    background-color: #111827;
+
+
+    color: white;
+
+
+    padding: 14px;
+
+
+    text-align: left;
+
+
+}
+
+
+
+
+
+
+.tabela-resumo td {
+
+
+    padding: 14px;
+
+
+    border-bottom: 1px solid #e5e7eb;
+
+
+}
+
+
+
+
+
+
+.receita {
+
+
+    color: #16a34a;
+
+
+    font-weight: bold;
+
+
+}
+
+
+
+
+
+
+.despesa {
+
+
+    color: #dc2626;
+
+
+    font-weight: bold;
+
+
+}
+
+
+
+
+
+
+.saldo-positivo {
+
+
+    color: #2563eb;
+
+
+    font-weight: bold;
+
+
+}
+
+
+
+
+
+
+.saldo-negativo {
+
+
+    color: #dc2626;
+
+
+    font-weight: bold;
+
+
+}
+
+.total-geral {
+
+
+    margin-top: 30px;
+
+
+    padding: 20px;
+
+
+    background-color: #f3f4f6;
+
+
+    border-radius: 10px;
+
+
+}
+
+
+
+.total-geral h2 {
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+.total-geral div {
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+    max-width: 400px;
+
+
+    margin-bottom: 10px;
+
+
+}
+
+
+
+
+.total-geral strong {
+
+
+    font-size: 16px;
+
+
+}
