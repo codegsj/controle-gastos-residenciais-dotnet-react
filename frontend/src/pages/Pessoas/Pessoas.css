@@ -226,3 +226,98 @@
 
 
 }
+
+.acoes-pessoa {
+
+
+    display: flex;
+
+
+    gap: 10px;
+
+
+    align-items: center;
+
+
+}
+
+
+
+
+
+.botao-transacoes {
+
+
+    background-color: #2563eb;
+
+
+    color: white;
+
+
+    padding: 8px 12px;
+
+
+    border-radius: 6px;
+
+
+    text-decoration: none;
+
+
+    font-size: 14px;
+
+
+}
+
+
+
+
+
+.botao-transacoes:hover {
+
+
+    background-color: #1d4ed8;
+
+
+}
+
+
+
+
+
+.botao-excluir {
+
+
+    background-color: #dc2626;
+
+
+    color: white;
+
+
+    border: none;
+
+
+    padding: 8px 12px;
+
+
+    border-radius: 6px;
+
+
+    cursor: pointer;
+
+
+    font-size: 14px;
+
+
+}
+
+
+
+
+
+.botao-excluir:hover {
+
+
+    background-color: #b91c1c;
+
+
+}

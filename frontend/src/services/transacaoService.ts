@@ -44,6 +44,28 @@ export async function criarTransacao(
 
     );
 
+    
+
+    return resposta.data;
+
+
+}
+
+// busca transações de uma pessoa específica
+
+export async function listarTransacoesPorPessoa(
+
+    pessoaId: number
+
+) {
+
+
+    const resposta = await api.get<Transacao[]>(
+
+        `/pessoas/${pessoaId}/transacoes`
+
+    );
+
 
     return resposta.data;
 
