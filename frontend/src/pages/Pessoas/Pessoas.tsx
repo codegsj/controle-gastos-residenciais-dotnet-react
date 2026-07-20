@@ -6,18 +6,23 @@ import { listarPessoas } from "../../services/pessoaService";
 
 import PessoaTable from "./PessoaTable";
 
+import PessoaForm from "./PessoaForm";
+
 import "./Pessoas.css";
 
 
+// página responsável pelo gerenciamento de pessoas
 
-export default function Pessoas(){
+export default function Pessoas() {
 
 
-    // guarda as pessoas vindas da API
+    // guarda as pessoas vindas da api
 
     const [pessoas, setPessoas] = useState<Pessoa[]>([]);
 
 
+
+    // executa quando a tela é carregada
 
     useEffect(() => {
 
@@ -29,7 +34,10 @@ export default function Pessoas(){
 
 
 
-    async function carregarPessoas(){
+
+    // busca as pessoas na api
+
+    async function carregarPessoas() {
 
 
         const dados = await listarPessoas();
@@ -42,28 +50,58 @@ export default function Pessoas(){
 
 
 
+
+    // atualiza a tabela depois de cadastrar uma pessoa
+
+    async function atualizarLista() {
+
+
+        const dados = await listarPessoas();
+
+
+        setPessoas(dados);
+
+
+    }
+
+
+
+
     return (
 
-    <div className="pessoas-container">
+        <div className="pessoas-container">
 
 
-        <h1>
-            Pessoas
-        </h1>
+            <h1>
+                Pessoas
+            </h1>
 
 
-        <p>
-            Cadastro e gerenciamento de pessoas.
-        </p>
+
+            <p>
+                Cadastro e gerenciamento de pessoas.
+            </p>
 
 
-        <PessoaTable 
-            pessoas={pessoas}
-        />
+
+            <PessoaForm
+
+                onPessoaCriada={atualizarLista}
+
+            />
 
 
-    </div>
 
-);
+            <PessoaTable
+
+                pessoas={pessoas}
+
+            />
+
+
+        </div>
+
+    );
+
 
 }

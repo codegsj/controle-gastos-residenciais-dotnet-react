@@ -21,3 +21,5 @@
 2026-07-20 10:18:36.275 -03:00 [INF] Aplicação Controle de Gastos iniciada com sucesso.
 2026-07-20 10:18:43.397 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
 2026-07-20 10:18:43.429 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:28:49.537 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 10:28:49.541 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
