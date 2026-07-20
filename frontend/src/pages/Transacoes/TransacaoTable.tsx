@@ -13,6 +13,8 @@ interface Props {
 
 
 
+
+
 // tabela responsável por exibir as transações
 
 export default function TransacaoTable({
@@ -67,6 +69,8 @@ export default function TransacaoTable({
 
 
 
+
+
             <tbody>
 
 
@@ -87,39 +91,87 @@ export default function TransacaoTable({
 
 
 
-                            <td>
-
-                                R$ {transacao.valor}
-
-                            </td>
-
-
 
 
                             <td>
 
                                 {
-                                    transacao.tipo === 1
-                                        ? "Receita"
-                                        : "Despesa"
+                                    transacao.valor.toLocaleString(
+                                        "pt-BR",
+                                        {
+                                            style: "currency",
+                                            currency: "BRL"
+                                        }
+                                    )
                                 }
 
-
                             </td>
+
+
+
 
 
 
 
                             <td>
 
+
+                                <span
+
+                                    className={
+                                        transacao.tipo === 1
+                                            ? "tipo-receita"
+                                            : "tipo-despesa"
+                                    }
+
+                                >
+
+
+                                    {
+
+                                        transacao.tipo === 1
+
+                                            ? "Receita"
+
+                                            : "Despesa"
+
+                                    }
+
+
+                                </span>
+
+
+                            </td>
+
+
+
+
+
+
+
+                            <td>
+
+
                                 {
+
                                     new Date(
+
                                         transacao.data
-                                    ).toLocaleDateString()
+
+                                    ).toLocaleDateString(
+
+                                        "pt-BR"
+
+                                    )
+
                                 }
 
 
                             </td>
+
+
+
+
 
 
 
@@ -132,10 +184,13 @@ export default function TransacaoTable({
 
 
 
+
+
                         </tr>
 
 
                     ))
+
 
                 }
 
@@ -148,5 +203,6 @@ export default function TransacaoTable({
 
 
     );
+
 
 }

@@ -1,3 +1,5 @@
+/* container principal da página */
+
 .transacoes-container {
 
     padding: 10px;
@@ -6,87 +8,253 @@
 
 
 
+
+
+
+/* card do formulário */
+
 .form-transacao {
 
 
     background-color: white;
 
-    padding: 20px;
+
+    padding: 25px;
+
 
     border-radius: 10px;
 
+
     margin-bottom: 30px;
+
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
 
 }
 
 
+
+
+
+/* título do formulário */
+
+.form-transacao h2 {
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+
+
+/* campos do formulário */
 
 .form-transacao input,
 .form-transacao select {
 
 
-    padding: 10px;
+    width: 100%;
 
-    margin-right: 10px;
+
+    padding: 12px;
+
+
+    margin-bottom: 15px;
+
+
+    border: 1px solid #d1d5db;
+
+
+    border-radius: 6px;
+
+
+    font-size: 14px;
+
 
 }
 
 
+
+
+
+
+
+/* botão salvar */
 
 .form-transacao button {
 
 
-    padding: 10px 20px;
-
     background-color: #2563eb;
+
 
     color: white;
 
+
     border: none;
+
+
+    padding: 12px 25px;
+
 
     border-radius: 6px;
 
+
     cursor: pointer;
+
+
+    font-size: 15px;
+
+
+    font-weight: 500;
 
 
 }
 
 
+
+
+
+.form-transacao button:hover {
+
+
+    background-color: #1d4ed8;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* tabela de transações */
 
 .tabela-transacoes {
 
 
     width: 100%;
 
+
     border-collapse: collapse;
 
+
     background-color: white;
+
+
+    border-radius: 10px;
+
+
+    overflow: hidden;
 
 
 }
 
 
+
+
+
+
+
+
+/* cabeçalho da tabela */
 
 .tabela-transacoes th {
 
 
     background-color: #111827;
 
+
     color: white;
 
-    padding: 12px;
+
+    padding: 14px;
+
+
+    text-align: left;
 
 
 }
 
 
 
+
+
+
+
+
+/* células da tabela */
+
 .tabela-transacoes td {
 
 
-    padding: 12px;
+    padding: 14px;
 
-    border-bottom: 1px solid #ddd;
+
+    border-bottom: 1px solid #e5e7eb;
+
+
+}
+
+
+
+
+
+
+
+/* efeito ao passar mouse */
+
+.tabela-transacoes tr:hover {
+
+
+    background-color: #f9fafb;
+
+
+}
+
+
+
+
+
+
+
+
+/* tipo receita */
+
+.tipo-receita {
+
+
+    color: #16a34a;
+
+
+    font-weight: bold;
+
+
+}
+
+
+
+
+
+
+
+
+/* tipo despesa */
+
+.tipo-despesa {
+
+
+    color: #dc2626;
+
+
+    font-weight: bold;
 
 
 }
