@@ -2,9 +2,11 @@
 
 .layout {
 
-
     display: flex;
 
+    min-height: 100vh;
+
+    background-color: #f3f4f6;
 
 }
 
@@ -13,14 +15,10 @@
 
 .content {
 
-
-    margin-left: 240px;
-
+    flex: 1;
 
     padding: 30px;
 
-
-    width: calc(100% - 240px);
-
+    margin-left: 240px;
 
 }

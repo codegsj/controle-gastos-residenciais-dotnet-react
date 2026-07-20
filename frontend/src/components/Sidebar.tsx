@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Sidebar.css";
 
 
+
+// componente responsável pelo menu lateral
+// controla a navegação principal da aplicação
+
 export default function Sidebar() {
-
-
-    // componente responsável pelo menu lateral
-    // da aplicação
 
 
     return (
@@ -15,43 +15,66 @@ export default function Sidebar() {
         <aside className="sidebar">
 
 
-            <h2>
-                Controle de Gastos
-            </h2>
+            <div className="sidebar-header">
+
+
+                <h2>
+                    Controle de Gastos
+                </h2>
+
+
+                <span>
+                    Sistema residencial
+                </span>
+
+
+            </div>
+
+
 
 
             <nav>
 
 
-                {/* acesso ao dashboard */}
-                <Link to="/">
+                <NavLink to="/">
+
                     Dashboard
-                </Link>
+
+                </NavLink>
 
 
-                {/* acesso ao gerenciamento de pessoas */}
-                <Link to="/pessoas">
+
+                <NavLink to="/pessoas">
+
                     Pessoas
-                </Link>
+
+                </NavLink>
 
 
-                {/* acesso ao gerenciamento das transações */}
-                <Link to="/transacoes">
+
+                <NavLink to="/transacoes">
+
                     Transações
-                </Link>
+
+                </NavLink>
 
 
-                {/* acesso aos relatórios */}
-                <Link to="/relatorios">
+
+                <NavLink to="/relatorios">
+
                     Relatórios
-                </Link>
+
+                </NavLink>
 
 
             </nav>
 
 
+
         </aside>
 
+
     );
+
 
 }

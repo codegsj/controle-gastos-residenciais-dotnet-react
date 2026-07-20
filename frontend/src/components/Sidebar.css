@@ -1,65 +1,156 @@
-/* estilo do menu lateral */
+/* menu lateral */
 
 .sidebar {
 
+
     width: 240px;
+
+
     height: 100vh;
 
-    background-color: #1f2937;
+
+    background-color: #111827;
+
 
     color: white;
 
-    padding: 20px;
+
+    padding: 25px;
+
 
     position: fixed;
 
+
     left: 0;
+
+
     top: 0;
 
-}
-
-
-/* titulo do sistema */
-
-.sidebar h2 {
-
-    margin-bottom: 30px;
 
 }
 
 
-/* área dos links */
+
+/* cabeçalho do menu */
+
+.sidebar-header {
+
+
+    padding-bottom: 25px;
+
+
+    border-bottom: 1px solid #374151;
+
+
+    margin-bottom: 25px;
+
+
+}
+
+
+
+.sidebar-header h2 {
+
+
+    font-size: 22px;
+
+
+    margin: 0;
+
+
+}
+
+
+
+.sidebar-header span {
+
+
+    display: block;
+
+
+    margin-top: 8px;
+
+
+    color: #9ca3af;
+
+
+    font-size: 13px;
+
+
+}
+
+
+
+
+/* menu */
 
 .sidebar nav {
 
+
     display: flex;
+
 
     flex-direction: column;
 
-    gap: 15px;
+
+    gap: 8px;
+
 
 }
 
 
-/* links do menu */
+
+
+/* links */
 
 .sidebar a {
 
-    color: white;
+
+    color: #e5e7eb;
+
 
     text-decoration: none;
 
-    padding: 10px;
 
-    border-radius: 5px;
+    padding: 12px 15px;
+
+
+    border-radius: 8px;
+
+
+    font-size: 15px;
+
+
+    transition: 0.2s;
+
 
 }
 
 
-/* efeito quando passar o mouse */
+
+
+/* passar mouse */
 
 .sidebar a:hover {
 
+
     background-color: #374151;
+
+
+}
+
+
+
+
+/* página selecionada */
+
+.sidebar a.active {
+
+
+    background-color: #2563eb;
+
+
+    color: white;
+
 
 }
