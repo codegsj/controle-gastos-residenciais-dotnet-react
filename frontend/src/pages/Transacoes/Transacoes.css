@@ -1,0 +1,92 @@
+.transacoes-container {
+
+    padding: 10px;
+
+}
+
+
+
+.form-transacao {
+
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.form-transacao input,
+.form-transacao select {
+
+
+    padding: 10px;
+
+    margin-right: 10px;
+
+}
+
+
+
+.form-transacao button {
+
+
+    padding: 10px 20px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+
+}
+
+
+
+.tabela-transacoes {
+
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+
+
+}
+
+
+
+.tabela-transacoes th {
+
+
+    background-color: #111827;
+
+    color: white;
+
+    padding: 12px;
+
+
+}
+
+
+
+.tabela-transacoes td {
+
+
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+
+
+}

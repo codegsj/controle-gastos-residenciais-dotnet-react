@@ -1,24 +1,107 @@
-export default function Transacoes(){
+import { useEffect, useState } from "react";
 
 
-    // página responsável pelo cadastro e consulta das transações
+import type { Transacao } from "../../models/Transacao";
 
 
-    return(
-
-        <div>
-
-            <h1>
-                Transações
-            </h1>
+import {
+    listarTransacoes
+} from "../../services/transacaoService";
 
 
-            <p>
-                Gerenciamento de receitas e despesas.
-            </p>
+import PageHeader from "../../components/PageHeader/PageHeader";
+
+
+import TransacaoForm from "./TransacaoForm";
+
+
+import TransacaoTable from "./TransacaoTable";
+
+
+import "./Transacoes.css";
+
+
+
+
+// página responsável pelo gerenciamento das transações
+
+export default function Transacoes() {
+
+
+
+    const [transacoes, setTransacoes] = useState<Transacao[]>([]);
+
+
+
+
+    useEffect(() => {
+
+
+        carregarTransacoes();
+
+
+    }, []);
+
+
+
+
+
+
+    // busca as transações na api
+
+    async function carregarTransacoes() {
+
+
+        const dados = await listarTransacoes();
+
+
+        setTransacoes(dados);
+
+
+    }
+
+
+
+
+
+
+    return (
+
+
+        <div className="transacoes-container">
+
+
+
+            <PageHeader
+
+                title="Transações"
+
+                description="Gerencie receitas e despesas do sistema."
+
+            />
+
+
+
+
+            <TransacaoForm
+
+                onTransacaoCriada={carregarTransacoes}
+
+            />
+
+
+
+
+            <TransacaoTable
+
+                transacoes={transacoes}
+
+            />
+
 
 
         </div>
+
 
     );
 

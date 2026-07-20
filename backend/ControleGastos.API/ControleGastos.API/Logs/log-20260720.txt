@@ -65,3 +65,25 @@
 2026-07-20 11:07:48.878 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
 2026-07-20 11:07:50.385 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
 2026-07-20 11:07:50.391 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:10:32.820 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:10:32.854 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:28.545 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:28.552 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:29.801 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:29.805 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:32.508 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:32.511 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:32.931 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:32.936 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:53.113 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:12:53.142 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:14:49.223 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:14:49.230 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:14:49.649 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:14:49.655 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 5
+2026-07-20 11:14:55.461 -03:00 [INF] Pessoa excluída com sucesso. Id: 11
+2026-07-20 11:14:55.466 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 4
+2026-07-20 11:16:03.226 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 4
+2026-07-20 11:16:03.229 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 4
+2026-07-20 11:16:03.901 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 4
+2026-07-20 11:16:03.905 -03:00 [INF] Consulta de pessoas realizada com sucesso. Quantidade encontrada: 4
