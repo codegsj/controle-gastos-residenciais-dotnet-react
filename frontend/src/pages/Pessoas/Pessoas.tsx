@@ -11,8 +11,9 @@ import PessoaTable from "./PessoaTable";
 
 import PessoaForm from "./PessoaForm";
 
-import "./Pessoas.css";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
+import "./Pessoas.css";
 
 
 
@@ -26,7 +27,6 @@ export default function Pessoas() {
 
 
 
-
     useEffect(() => {
 
 
@@ -37,9 +37,6 @@ export default function Pessoas() {
 
 
 
-
-
-    // busca pessoas na api
 
     async function carregarPessoas() {
 
@@ -55,11 +52,7 @@ export default function Pessoas() {
 
 
 
-
-
-    // exclui uma pessoa
-
-    async function removerPessoa(id: number) {
+    async function removerPessoa(id:number) {
 
 
         await excluirPessoa(id);
@@ -74,23 +67,20 @@ export default function Pessoas() {
 
 
 
-
     return (
 
 
         <div className="pessoas-container">
 
 
-            <h1>
-                Pessoas
-            </h1>
+            <PageHeader
+
+                title="Pessoas"
+
+                description="Gerencie os usuários cadastrados no sistema."
 
 
-
-            <p>
-                Cadastro e gerenciamento de pessoas.
-            </p>
-
+            />
 
 
 
@@ -102,8 +92,6 @@ export default function Pessoas() {
 
 
 
-
-
             <PessoaTable
 
                 pessoas={pessoas}
@@ -111,7 +99,6 @@ export default function Pessoas() {
                 onExcluir={removerPessoa}
 
             />
-
 
 
         </div>
